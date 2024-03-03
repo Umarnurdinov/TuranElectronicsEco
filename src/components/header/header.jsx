@@ -1,24 +1,47 @@
-import React from "react";
-import bigLogo from "../../assets/bigLogo.png";
-import Logo from "../../assets/Logo.png";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
+import bigLogo from "../../assets/bigLogo.png";
+import Logo from "../../assets/Logo.png";
 import health from "../../assets/health.svg";
 import basket from "../../assets/basket.svg";
 import profile from "../../assets/profile.svg";
 import search from "../../assets/search.svg";
-// import logomini from "../../assets/Logomini.png";
 import line from "../../assets/line.svg";
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
   return (
     <>
       <div className="header">
         <div className="container">
           <div className="header__content">
-            <div className="start">
-              <img src={line} alt="#" />
-              <img src={search} alt="#" />
+            <div className="icon__and__menu">
+              <div className="start">
+                <img onClick={toggleMenu} src={line} alt="#" />
+                <img src={search} alt="#" />
+              </div>
+              {isMenuOpen && (
+                <div className="menu__nav">
+                  <Link to={"/"} className="menu__nav__links">
+                    Главная
+                  </Link>
+                  <Link to={"/categories"} className="menu__nav__links">
+                    Категория
+                  </Link>
+                  <Link to={"/news"} className="menu__nav__links">
+                    Новости
+                  </Link>
+                  <Link to={"/aboutUs"} className="menu__nav__links">
+                    О нас
+                  </Link>
+                </div>
+              )}
             </div>
             <div className="header__biglogo">
               <img src={bigLogo} className="biglogo" />
