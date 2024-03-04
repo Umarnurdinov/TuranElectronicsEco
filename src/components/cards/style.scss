@@ -1,0 +1,128 @@
+.cards {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+.recomended__text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 80%;
+  text-align: center;
+  color: #000;
+}
+.recomended__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.recomended__lookAll {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.lookAll__btn {
+  border: 1px solid #fff;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48), -4px -2px 16px 0 #fff;
+  background: #e3edf7;
+}
+.recomends__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.recomends__footer__title2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.firstPage {
+  border: 1px solid #fff;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48), -4px -2px 16px 0 #fff;
+  background: #e3edf7;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 96%;
+  text-align: center;
+  color: #000;
+}
+.secondPage {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 96%;
+  text-align: center;
+  color: #000;
+  background: transparent;
+  border: none;
+}
+.thirdPage {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 96%;
+  text-align: center;
+  color: #000;
+  background: transparent;
+  border: none;
+}
+.nextPage {
+  border: 1px solid #fff;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48), -4px -2px 16px 0 #fff;
+  background: #e3edf7;
+}
+@media screen and (max-width: 1152px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .recomended__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    text-align: center;
+    color: #000;
+  }
+  .lookAll__text {
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 200%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-align: center;
+    color: #000;
+  }
+  .lookAll__btn {
+    display: none;
+  }
+  .cards {
+    gap: 10px;
+    padding: 0;
+  }
+  .recomends__footer {
+    display: none;
+  }
+}

@@ -2,14 +2,14 @@ import React from "react";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
 
-function AboutUs() {
+function Basket() {
   return (
     <>
       <Header />
-      <p>AboutUs</p>
+      <p>Basket page</p>
       <Footer />
     </>
   );
 }
 
-export default AboutUs;
+export default Basket;

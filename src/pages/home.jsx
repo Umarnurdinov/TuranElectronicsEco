@@ -1,15 +1,18 @@
 import React from "react";
 import Header from "../components/header/header";
-import List from "../components/listAddmission";
+import Cards from "../components/cards";
+import Footer from "../components/footer/footer";
+import Brands from "../components/brands/brand";
 
 function Home() {
-    return (
-        <>
-        <span>Home</span>
-            <Header />
-            <List />
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <List />
+      <Cards />
+      <Brands />
+      <Footer />
+    </>
+  );
 }
-
 export default Home;
