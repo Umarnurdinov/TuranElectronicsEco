@@ -1,8 +1,10 @@
 body {
-  background: #e3edf7;
-  margin: 0;
+    background: #e3edf7;
+    margin: 0;
 }
 .container {
-  max-width: 1250px;
-  margin: 0 auto;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 15px;
+    border: 2px solid red;
 }

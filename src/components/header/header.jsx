@@ -48,7 +48,7 @@ function Header() {
                 <button className="header__health__btn">
                   <img className="health" src={health} alt="#" />
                 </button>
-                <button className="header__basket__btn">
+                <button  className="header__basket__btn">
                   <img className="basketImg" src={basket} alt="#" />
                 </button>
                 <button className="header__profile__btn">
