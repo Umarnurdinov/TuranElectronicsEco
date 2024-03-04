@@ -8,11 +8,11 @@ function Home() {
   return (
     <>
       <Header />
+      <List />
       <Cards />
       <Brands />
       <Footer />
     </>
   );
 }
-
 export default Home;
