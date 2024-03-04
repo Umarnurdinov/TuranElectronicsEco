@@ -5,4 +5,15 @@ body {
 .container {
   max-width: 1250px;
   margin: 0 auto;
+  padding: 0 15px;
+}
+.forgot {
+  margin: 0 auto;
+  background: url("https://sitechecker.pro/wp-content/uploads/2023/06/404-status-code.png")
+    no-repeat center / cover;
+  width: 100vh;
+  height: 100vh;
+}
+.color {
+  background: rgb(109, 109, 197);
 }
