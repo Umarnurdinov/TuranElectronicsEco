@@ -8,7 +8,6 @@ function Home() {
   return (
     <>
       <Header />
-      <List />
       <Cards />
       <Brands />
       <Footer />
