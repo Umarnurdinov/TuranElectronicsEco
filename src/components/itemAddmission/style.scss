@@ -43,9 +43,9 @@
             .color {
                 border-radius: 50%;
                 background: pink;
-                border: 1px solid;
-                width: 15px;
-                height: 15px;
+                border: none;
+                width: 25px;
+                height: 25px;
             }
             .card__content__black {
                 background: #604d4d;
@@ -235,3 +235,4 @@
         display: none;
     }
 }
+
