@@ -8,7 +8,7 @@ import BasketFull from "./pages/basket";
 import Favorite from "./pages/favorite";
 import Basket from "./pages/basket";
 import Registration from "./pages/registration";
-import RegistrationAccept from "./pages/registrationAcept";
+import RegistrationAccept from "./pages/registrationAccept";
 import Login from "./pages/login";
 import ForgotPassword from "./pages/forgotPassword";
 
