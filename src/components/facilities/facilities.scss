@@ -1,0 +1,125 @@
+.facilities {
+    .carButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+    }
+    .carSpan{
+        display: flex;
+        text-decoration: none;
+    }
+    .factilities__navs {
+        display: flex;
+        justify-content: space-between;
+    }
+    .delivery__nav button {
+        border-radius: 20px;
+        width: 295px;
+        height: 61px;
+        box-shadow: 16px 16px 64px 0 rgba(18, 61, 101, 0.48), -16px -16px 40px 0 rgba(255, 255, 255, 0.8);
+        background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+        border: none;
+        margin-top: 30px;
+    }
+    .delivery__nav span {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 333%;
+        color: #000;
+        text-align: center;
+    }
+
+    .service__nav button {
+        border-radius: 20px;
+        width: 295px;
+        height: 61px;
+        box-shadow: 16px 16px 64px 0 rgba(18, 61, 101, 0.48), -16px -16px 40px 0 rgba(255, 255, 255, 0.8);
+        background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+        border: none;
+        margin-top: 30px;
+
+    }
+
+    .service__nav span {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 333%;
+        color: #000;
+        text-align: center;
+    }
+
+    .guarantee__nav button {
+        border-radius: 20px;
+        width: 295px;
+        height: 61px;
+        box-shadow: 16px 16px 64px 0 rgba(18, 61, 101, 0.48), -16px -16px 40px 0 rgba(255, 255, 255, 0.8);
+        background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+        border: none;
+        margin-top: 30px;
+
+    }
+
+    .guarantee__nav span {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 333%;
+        color: #000;
+        text-align: center;
+    }
+
+    .credit__nav button {
+        border-radius: 20px;
+        width: 295px;
+        height: 61px;
+        box-shadow: 16px 16px 64px 0 rgba(18, 61, 101, 0.48), -16px -16px 40px 0 rgba(255, 255, 255, 0.8);
+        background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+        border: none;
+        margin-top: 30px;
+
+    }
+
+    .credit__nav span {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 333%;
+        color: #000;
+        text-align: center;
+    } 
+}
+
+@media screen and (max-width: 618px) {
+    .factilities__nav {
+        display: none;
+    }
+    // .credit__nav {
+    //     display: none;
+    // }
+    // .delivery__nav {
+    //     display: none;
+    // }
+    // .guarantee__nav {
+    //     display: none;
+    // }
+    // .service__nav {
+    //     display: none;
+    // }
+}
+
+@media  screen and (max-width: 1180px) {
+    .factilities__navs {
+        display: none;
+        flex: wrap;
+        
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1244px) {
+    
+}

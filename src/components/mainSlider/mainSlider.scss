@@ -1,0 +1,32 @@
+.mainSlider {
+    .copterMain img {
+        border-radius: 20px;
+        width: 1249px;
+        height: 282px;
+    }
+
+    .dysonslider img {
+        border-radius: 20px;
+        width: 1249px;
+        height: 282px;
+        margin-top: 22px;
+    }
+
+    .xiaomislider img {
+        border-radius: 20px;
+        width: 1249px;
+        height: 282px;
+        margin-top: 22px;
+    }
+}
+
+@media screen and (max-width: 618px) {
+    .photosslider img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        width: 351px;
+        height: 180px;
+    }
+}
