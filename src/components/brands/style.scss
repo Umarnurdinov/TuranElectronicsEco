@@ -12,10 +12,6 @@
     color: #000;
 }
 .brands__img {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 .apple {
     object-fit: cover;
@@ -91,4 +87,9 @@
     .footer__brands {
         display: none;
     }
+}
+@media screen and (max-width: 450px) {
+  .footer__brands {
+    display: none;
+  }
 }
