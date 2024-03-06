@@ -1,6 +1,6 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/home";
-import FavoriteEmpty from "./pages/favoriteEmpty";
+import FavoriteEmpty from "./pages/favorite";
 import Categories from "./pages/categories";
 import News from "./pages/news";
 import AboutUs from "./pages/aboutUs";
@@ -13,6 +13,13 @@ import Apple from "./pages/apple"
 import Xiaomi from "./pages/xiaomi";
 import Samsung from "./pages/samsung"
 import Sony from "./pages/sony"
+import BasketFull from "./pages/basket";
+import Favorite from "./pages/favorite";
+import Basket from "./pages/basket";
+import Registration from "./pages/registration";
+import RegistrationAccept from "./pages/registrationAcept";
+import Login from "./pages/login";
+import ForgotPassword from "./pages/forgotPassword";
 
 const routes = createBrowserRouter([
   {
@@ -70,7 +77,30 @@ const routes = createBrowserRouter([
   {
     path: "sonybrand",
     element: <Sony />
-  }
+  },
+{    path: "/basket",
+    element: <Basket />,
+  },
+  {
+    path: "/favorite",
+    element: <Favorite />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/registration",
+    element: <Registration />,
+  },
+  {
+    path: "/registration/accept",
+    element: <RegistrationAccept />,
+  },
+  {
+    path: "/forgot",
+    element: <ForgotPassword />,
+  },
 ]);
 
 function App() {
