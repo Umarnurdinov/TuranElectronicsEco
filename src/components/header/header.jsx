@@ -64,18 +64,26 @@ function Header() {
               </nav>
             </div>
             <div className="basket">
-              <img src={basket} alt="#" />
+              <Link to={"/basket"}>
+                <img src={basket} alt="#" />
+              </Link>
             </div>
             <div className="header__info">
               <div className="header__btns">
                 <button className="header__health__btn">
-                  <img className="health" src={health} alt="#" />
+                  <Link to={"/favorite"}>
+                    <img className="health" src={health} alt="#" />
+                  </Link>
                 </button>
                 <button className="header__basket__btn">
-                  <img className="basketImg" src={basket} alt="#" />
+                  <Link to={"/basket"}>
+                    <img className="basketImg" src={basket} alt="#" />
+                  </Link>
                 </button>
                 <button className="header__profile__btn">
-                  <img className="profile" src={profile} alt="#" />
+                  <Link to={"/registration"}>
+                    <img className="profile" src={profile} alt="#" />
+                  </Link>
                 </button>
               </div>
               <div className="inputs">
