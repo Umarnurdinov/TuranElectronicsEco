@@ -1,8 +1,8 @@
 import React from "react";
 import frame from "../../assets/Frame.png";
-import facebook from "../../assets/FacebookForLogin.png";
-import google from "../../assets/GoogleForLogin.png";
-import telegram from "../../assets/TelegramForLogin.png";
+import facebook from "../../assets/FacebookForLogin.svg";
+import google from "../../assets/GoogleForLogin.svg";
+import telegram from "../../assets/TelegramForLogin.svg";
 import { Checkbox, Input } from "antd";
 import { Link } from "react-router-dom";
 import "./style.scss";
@@ -16,7 +16,7 @@ function Registr() {
     <>
       <div className="registr">
         <div className="container">
-          <h1 className="register__logo">Регистрация</h1>
+          <h1 className="registr__logo">Регистрация</h1>
           <div className="registr__content">
             <p className="registr__content__title">
               Авторизуйтесь, указав свои контактные данные, или <br />
@@ -35,7 +35,9 @@ function Registr() {
               </Checkbox>
             </div>
             <div className="registrButton">
-              <button className="registr__btn">Регистрация</button>
+              <Link to={"/registration/accept"}>
+                <button className="registr__btn">Регистрация</button>
+              </Link>
               <img className="registrImg" src={frame} alt="#" />
               <div className="login">
                 <p className="registr__text">Уже регистрировались?</p>
@@ -43,24 +45,24 @@ function Registr() {
                   Войти
                 </Link>
               </div>
-              <p className="otherlogintext">Войти через</p>
-              <div className="otherlogin">
-                <img
-                  className="facebook"
-                  src={facebook}
-                  alt="https://www.facebook.com/?locale=ru_RU"
-                />
-                <img
-                  className="google"
-                  src={google}
-                  alt="https://www.google.ru/"
-                />
-                <img
-                  className="telegram"
-                  src={telegram}
-                  alt="https://web.telegram.org/k/"
-                />
-              </div>
+            </div>
+            <p className="otherlogintext">Войти через</p>
+            <div className="otherlogin">
+              <img
+                className="facebook"
+                src={facebook}
+                alt="https://www.facebook.com/?locale=ru_RU"
+              />
+              <img
+                className="google"
+                src={google}
+                alt="https://www.google.ru/"
+              />
+              <img
+                className="telegram"
+                src={telegram}
+                alt="https://web.telegram.org/k/"
+              />
             </div>
           </div>
         </div>
