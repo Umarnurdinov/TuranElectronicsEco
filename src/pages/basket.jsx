@@ -4,16 +4,17 @@ import Footer from "../components/footer/footer";
 import BasketPage from "../components/basket";
 import Recomends from "../components/recomends";
 import Cards from "../components/cards";
+import Brands from "../components/brands/brand";
 
 function Basket() {
-    return (
-        <>
-            <Header />
-            <BasketPage />
-            <Cards />
-            <Footer />
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <BasketPage />
+      <Brands />
+      <Footer />
+    </>
+  );
 }
 
 export default Basket;

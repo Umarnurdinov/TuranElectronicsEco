@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./style.scss";
 import bigLogo from "../../assets/bigLogo.png";
@@ -8,9 +8,18 @@ import basket from "../../assets/basket.svg";
 import profile from "../../assets/profile.svg";
 import search from "../../assets/search.svg";
 import line from "../../assets/line.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: "ease-in-out",
+    });
+  }, []);
 
   function toggleMenu() {
     setIsMenuOpen(!isMenuOpen);
@@ -26,22 +35,6 @@ function Header() {
                 <img onClick={toggleMenu} src={line} alt="#" />
                 <img src={search} alt="#" />
               </div>
-              {isMenuOpen && (
-                <div className="menu__nav">
-                  <Link to={"/"} className="menu__nav__links">
-                    Главная
-                  </Link>
-                  <Link to={"/categories"} className="menu__nav__links">
-                    Категория
-                  </Link>
-                  <Link to={"/news"} className="menu__nav__links">
-                    Новости
-                  </Link>
-                  <Link to={"/aboutUs"} className="menu__nav__links">
-                    О нас
-                  </Link>
-                </div>
-              )}
             </div>
             <div className="header__biglogo">
               <img src={bigLogo} className="biglogo" />
@@ -98,6 +91,24 @@ function Header() {
           </div>
         </div>
       </div>
+      {isMenuOpen && (
+        <div className="container">
+          <div data-aos="zoom-in-down" className="menu__nav">
+            <Link to={"/"} className="menu__nav__links">
+              Главная
+            </Link>
+            <Link to={"/categories"} className="menu__nav__links">
+              Категория
+            </Link>
+            <Link to={"/news"} className="menu__nav__links">
+              Новости
+            </Link>
+            <Link to={"/aboutUs"} className="menu__nav__links">
+              О нас
+            </Link>
+          </div>
+        </div>
+      )}
     </>
   );
 }
