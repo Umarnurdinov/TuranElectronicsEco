@@ -112,7 +112,7 @@
   text-align: center;
   color: #000;
 }
-.login {
+.login__reg {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -175,7 +175,7 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .login{
+  .login__reg{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;

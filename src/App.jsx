@@ -11,6 +11,7 @@ import Registration from "./pages/registration";
 import RegistrationAccept from "./pages/registrationAcept";
 import Login from "./pages/login";
 import ForgotPassword from "./pages/forgotPassword";
+import Product from "./pages/product";
 
 const routes = createBrowserRouter([
   {
@@ -57,10 +58,18 @@ const routes = createBrowserRouter([
     path: "/forgot",
     element: <ForgotPassword />,
   },
+  {
+    path: "/about/product/:id",
+    element: <Product/>
+  },
 ]);
 
 function App() {
-  return <RouterProvider router={routes} />;
+
+  return (
+
+    <RouterProvider router={routes} />
+  )
 }
 
 export default App;

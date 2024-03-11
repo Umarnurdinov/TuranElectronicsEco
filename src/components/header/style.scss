@@ -144,6 +144,12 @@ input::placeholder {
     width: 90px;
     height: 30px;
 }
+.basket__counter {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    color: #ff7300;
+}
 @media screen and (max-width: 1900px) {
     .start {
         display: none;

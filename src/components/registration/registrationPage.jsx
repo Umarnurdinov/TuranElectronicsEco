@@ -38,7 +38,7 @@ function Registr() {
                                 placeholder="Email или телефон ..."
                             />
                             <Checkbox className="check" onChange={onChange}>
-                                Я согласен с у͟с͟л͟о͟в͟и͟я͟м͟и͟ ͟о͟б͟р͟а͟б͟о͟т͟к͟и͟ <br />{" "}
+                                Я согласен с у͟с͟л͟о͟в͟и͟я͟м͟и͟ ͟о͟б͟р͟а͟б͟о͟т͟к͟и͟ <br />
                                 персональных данных
                             </Checkbox>
                         </div>
@@ -47,7 +47,7 @@ function Registr() {
                                 Регистрация
                             </button>
                             <img className="registrImg" src={frame} alt="#" />
-                            <div className="login">
+                            <div className="login__reg">
                                 <p className="registr__text">
                                     Уже регистрировались?
                                 </p>
@@ -55,24 +55,24 @@ function Registr() {
                                     Войти
                                 </Link>
                             </div>
-                            <p className="otherlogintext">Войти через</p>
-                            <div className="otherlogin">
-                                <img
-                                    className="facebook"
-                                    src={facebook}
-                                    alt="https://www.facebook.com/?locale=ru_RU"
-                                />
-                                <img
-                                    className="google"
-                                    src={google}
-                                    alt="https://www.google.ru/"
-                                />
-                                <img
-                                    className="telegram"
-                                    src={telegram}
-                                    alt="https://web.telegram.org/k/"
-                                />
-                            </div>
+                        </div>
+                        <p className="otherlogintext">Войти через</p>
+                        <div className="otherlogin">
+                            <img
+                                className="facebook"
+                                src={facebook}
+                                alt="https://www.facebook.com/?locale=ru_RU"
+                            />
+                            <img
+                                className="google"
+                                src={google}
+                                alt="https://www.google.ru/"
+                            />
+                            <img
+                                className="telegram"
+                                src={telegram}
+                                alt="https://web.telegram.org/k/"
+                            />
                         </div>
                     </div>
                 </div>
