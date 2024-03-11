@@ -10,11 +10,13 @@ import StarRating from "../starRating";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import basketReducer from "../../store/basket";
+import likeFull from "../../assets/likeFull.png"
 
 function ItemAddmission({ data }) {
     const [date, setDate] = useState(true);
     const [colors, setColors] = useState([]);
     const [counter, setCounter] = useState(0);
+    const [liked, setLiked] = useState(false)
 
     const dispatch = useDispatch();
 
@@ -52,6 +54,7 @@ function ItemAddmission({ data }) {
     }
     function likeHandler(e) {
         e.stopPropagation();
+        setLiked(!liked);
         dispatch({ type: "LIKEPRODUCT", payload: data });
     }
     return (
@@ -76,7 +79,8 @@ function ItemAddmission({ data }) {
                         </div>
                         <div className="card__product__likeImg">
                             <img onClick={(e)=>likeHandler(e)}
-                                src={like}
+                        
+                                src={liked?likeFull:like}
                                 alt=""
                                 className="card__product__like"
                             />

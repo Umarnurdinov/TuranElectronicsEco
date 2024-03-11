@@ -11,10 +11,10 @@ function Favorite() {
         <>
             <Header />
             {dataLike.map((el)=>(
-
-            <Recomends   />
-            ))}
+             <h1>{el.title}</h1>
+              ))}
             <Footer />
+              // <Recomends   />
         </>
     );
 }
