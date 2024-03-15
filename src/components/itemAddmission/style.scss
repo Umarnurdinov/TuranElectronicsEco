@@ -42,16 +42,9 @@
 
             .color {
                 border-radius: 50%;
-                background: pink;
                 border: none;
                 width: 25px;
                 height: 25px;
-            }
-            .card__content__black {
-                background: #604d4d;
-            }
-            .card__content__white {
-                background: #fff;
             }
         }
     }
@@ -141,9 +134,6 @@
 }
 
 @media screen and (max-width: 1108px) {
-    // .card__info__text {
-    //     display: none;
-    // }
     .content__new {
         width: 32px;
         height: 17px;
@@ -188,6 +178,9 @@
         display: block;
     }
     .card__star {
+        display: none;
+    }
+    .card__infos__sale {
         display: none;
     }
 }
@@ -235,4 +228,3 @@
         display: none;
     }
 }
-
