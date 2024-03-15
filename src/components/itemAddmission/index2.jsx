@@ -1,28 +1,37 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+// import React from 'react'
+
+// function ItemAddmission() {
+//   return (
+//     <div>ItemAddmission</div>
+//   )
+// }
+
+// export default ItemAddmission
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 import product from "../../assets/phone.png";
-import fullStar from "../../assets/fullStar.png";
-import star from "../../assets/star.png";
 import check from "../../assets/check.png";
 import like from "../../assets/likeHeart.png";
 import basket from "../../assets/basket.png";
 import StarRating from "../starRating";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import basketReducer from "../../store/basket";
-import likeFull from "../../assets/likeFull.png"
+import { useDispatch } from "react-redux";
+import likeFull from "../../assets/likeFull.png";
 
 function ItemAddmission({ data }) {
+    console.log(data);
     const [date, setDate] = useState(true);
     const [colors, setColors] = useState([]);
     const [counter, setCounter] = useState(0);
-    const [liked, setLiked] = useState(false)
+
+    const [liked, setLiked] = useState(false);
 
     const dispatch = useDispatch();
 
     const nav = useNavigate();
 
     useEffect(() => {
+        setLiked(data.favorite);
         const currentDate = new Date().getTime();
 
         const millysecondDiff = currentDate - data.date;
@@ -45,16 +54,20 @@ function ItemAddmission({ data }) {
     }
     function orderHarry(e) {
         e.stopPropagation();
-        console.log("order");
+        dispatch({ type: "ADDPRODUCT", payload: data });
+        nav(`/basket`);
+        dispatch({ type: "AMOUNTPLUS", payload: data.price });
     }
     function basketHandler(e) {
         e.stopPropagation();
         setCounter(counter + 1);
         dispatch({ type: "ADDPRODUCT", payload: data });
+        dispatch({ type: "AMOUNTPLUS", payload: data.price });
     }
     function likeHandler(e) {
         e.stopPropagation();
         setLiked(!liked);
+        data.favorite = !data.favorite;
         dispatch({ type: "LIKEPRODUCT", payload: data });
     }
     return (
@@ -78,9 +91,9 @@ function ItemAddmission({ data }) {
                             />
                         </div>
                         <div className="card__product__likeImg">
-                            <img onClick={(e)=>likeHandler(e)}
-                        
-                                src={liked?likeFull:like}
+                            <img
+                                onClick={(e) => likeHandler(e)}
+                                src={liked ? likeFull : like}
                                 alt=""
                                 className="card__product__like"
                             />
@@ -180,20 +193,3 @@ function ItemAddmission({ data }) {
 }
 
 export default ItemAddmission;
-
-// function starRating(rating) {
-//     const fullStars = Math.floor(rating);
-//     const halfStar = rating % 1 !== 0;
-
-//     const stars = Array.from({ length: 5 }, (_, index) => {
-//         if (index < fullStars) {
-//             return <img key={index} src={fullStar} alt="" />;
-//         } else if (index === fullStars && halfStar) {
-//             return <img key={index} src={star} alt="" />;
-//         } else {
-//             return <img key={index} src={star} alt="" />;
-//         }
-//     });
-
-//     return stars;
-// }

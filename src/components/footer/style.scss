@@ -1,5 +1,4 @@
 .footer {
-    // position: fixed;
     padding: 20px 0;
 }
 
@@ -328,4 +327,14 @@
         display: flex;
         gap: 40px;
     }
+}
+@media screen and (max-width: 400px) {
+  .footer {
+    padding: 50px;
+  }
+  .footer__adaptive {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
 }

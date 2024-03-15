@@ -4,19 +4,18 @@ import star from "../../assets/star.png";
 
 function StarRating({ rating }) {
     const stars = useRef(new Array(5).fill(1));
-    console.log(stars);
 
     return (
         <>
-            {stars.current.map((el, idx) => (
+            {stars.current.map((el,idx) => (
                 <img
                     key={idx}
                     src={idx + 1 > rating ? star : fullStar}
-                    alt=""
+                    alt="#"
                 />
             ))}
         </>
     );
 }
 
-export default StarRating
+export default StarRating;

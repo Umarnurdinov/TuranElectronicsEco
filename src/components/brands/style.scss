@@ -1,94 +1,100 @@
 .footer__brands {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
 }
 .brands__text {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 200%;
-    color: #000;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 200%;
+  color: #000;
 }
 .brands__img {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .apple {
-    object-fit: cover;
+  object-fit: cover;
 }
 .dyson {
-    object-fit: cover;
+  object-fit: cover;
 }
 .playstation {
-    object-fit: cover;
+  object-fit: cover;
 }
 .samsung {
-    object-fit: cover;
+  object-fit: cover;
 }
 .xiaomi {
-    object-fit: cover;
+  object-fit: cover;
 }
 .imgApple {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 24px;
-    width: 233px;
-    height: 106px;
-    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
-        inset -8px 0 -6px 80px 0 rgba(255, 255, 255, 0.18);
-    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  width: 233px;
+  height: 106px;
+  box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+    inset -8px 0 -6px 80px 0 rgba(255, 255, 255, 0.18);
+  background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
 }
 .imgDyson {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 24px;
-    width: 233px;
-    height: 106px;
-    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
-        inset -8px 0 -6px 80px 0 rgba(255, 255, 255, 0.18);
-    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  width: 233px;
+  height: 106px;
+  box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+    inset -8px 0 -6px 80px 0 rgba(255, 255, 255, 0.18);
+  background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
 }
 .imgPlaystation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 24px;
-    width: 233px;
-    height: 106px;
-    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
-        inset -8px 0 -6px 80px 0 rgba(255, 255, 255, 0.18);
-    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  width: 233px;
+  height: 106px;
+  box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+    inset -8px 0 -6px 80px 0 rgba(255, 255, 255, 0.18);
+  background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
 }
 .imgSamsung {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 24px;
-    width: 233px;
-    height: 106px;
-    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
-        inset -8px 0 -6px 80px 0 rgba(255, 255, 255, 0.18);
-    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  width: 233px;
+  height: 106px;
+  box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+    inset -8px 0 -6px 80px 0 rgba(255, 255, 255, 0.18);
+  background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
 }
 .imgXiaomi {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 24px;
-    width: 233px;
-    height: 106px;
-    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
-        inset -8px 0 -6px 80px 0 rgba(255, 255, 255, 0.18);
-    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  width: 233px;
+  height: 106px;
+  box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+    inset -8px 0 -6px 80px 0 rgba(255, 255, 255, 0.18);
+  background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
 }
 @media screen and (max-width: 470px) {
-    .footer__brands {
-        display: none;
-    }
+  .footer__brands {
+    display: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .footer__brands {
+    display: none;
+  }
 }

@@ -2,19 +2,29 @@ import React from "react";
 import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
 import { useSelector } from "react-redux";
-import Recomends from "../components/recomends";
+import ItemAddmission from "../components/itemAddmission/index2";
 
 function Favorite() {
     const dataLike = useSelector((state) => state.like.products);
-    console.log(dataLike);
     return (
         <>
             <Header />
-            {dataLike.map((el)=>(
-             <h1>{el.title}</h1>
-              ))}
+            <div className="container">
+                <div
+                    className="favorite__list"
+                    style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(4,1fr)",
+                        gap: "40px",
+                        marginTop: "45px",
+                    }}
+                >
+                    {dataLike.map((el, idx) => (
+                        <ItemAddmission key={idx} data={el} />
+                    ))}
+                </div>
+            </div>
             <Footer />
-              // <Recomends   />
         </>
     );
 }

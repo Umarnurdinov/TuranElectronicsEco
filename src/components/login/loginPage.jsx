@@ -3,9 +3,9 @@ import "./style.scss";
 import { Input } from "antd";
 import frame from "../../assets/Frame.png";
 import { Link } from "react-router-dom";
-import facebook from "../../assets/FacebookForLogin.png";
-import google from "../../assets/GoogleForLogin.png";
-import telegram from "../../assets/TelegramForLogin.png";
+import facebook from "../../assets/FacebookForLogin.svg";
+import google from "../../assets/GoogleForLogin.svg";
+import telegram from "../../assets/TelegramForLogin.svg";
 
 function LoginPage() {
   const onChange = (e) => {

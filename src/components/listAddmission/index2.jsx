@@ -1,12 +1,11 @@
-import React from "react";
-import ItemAddmission from "../itemAddmission";
+import ItemAddmission from "../itemAddmission/index2";
 import "./style.scss";
 import product from "../../assets/phone.png";
 
 export const data = [
     {
         img: { product },
-        price: 200500,
+        price: 200,
         title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
         description:
             "iPhone 14 Pro MaxВолшебный новый способ взаимодействия с iPhone. .....",
@@ -26,7 +25,7 @@ export const data = [
     },
     {
         img: { product },
-        price: 200500,
+        price: 700,
         title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
         description:
             "iPhone 14 Pro MaxВолшебный новый способ взаимодействия с iPhone. .....",
@@ -38,7 +37,7 @@ export const data = [
     },
     {
         img: { product },
-        price: 200500,
+        price: 3000,
         title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
         description:
             "iPhone 14 Pro MaxВолшебный новый способ взаимодействия с iPhone. .....",
@@ -50,7 +49,7 @@ export const data = [
     },
     {
         img: { product },
-        price: 200500,
+        price: 3000,
         title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
         description:
             "iPhone 14 Pro MaxВолшебный новый способ взаимодействия с iPhone. .....",
@@ -67,9 +66,11 @@ function List() {
         <div className="container">
             <h1 className="list__title">Новое поступление</h1>
             <div className="list">
-                {data.map((el, idx) => (
-                    <ItemAddmission key={idx} data={el} />
+                {data.map((el)=>(
+
+                <ItemAddmission data={el} />
                 ))}
+      
             </div>
         </div>
     );

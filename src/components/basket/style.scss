@@ -1,43 +1,593 @@
-.basket__info {
+.basket__delete {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.basket__content {
+    padding: 20px 0;
+}
+.basket__navlinks {
+    display: flex;
+    gap: 3px;
+}
+.homelinkFrombasket {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 333%;
+    color: #888;
+}
+.categoriesFrombasket {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 333%;
+    color: #888;
+}
+.basketFromBasket {
+    text-decoration: none;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 333%;
+    color: #888;
+}
+.basket__logo {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 200%;
+    color: #000;
+    margin-bottom: 0;
+}
+.deleteAll {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 240%;
+    text-align: center;
+    color: #011eb8;
+    margin-bottom: 0;
+}
+
+.basketToLogin {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 240%;
+    text-align: center;
+    color: #011eb8;
+    text-decoration: none;
+}
+.basket__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.nameFromBasket {
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 1251px;
+    height: 70px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 24px;
+    background: transparent;
+}
+.basket__phoneAndEmail {
+    display: flex;
+    gap: 21px;
+}
+.phoneFromBasket {
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 615px;
+    height: 70px;
+    background: transparent;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 24px;
+    color: #888;
+}
+.emailFromBasket {
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 615px;
+    height: 70px;
+    background: transparent;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 24px;
+    color: #888;
+}
+.basket__checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 30px;
+}
+.checkFromBasket {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 240%;
+    text-align: center;
+    color: #011eb8;
+}
+.delivery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 86px;
+}
+.self__call {
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #fff;
     border-radius: 24px;
-    max-width: 1250px;
-    height: 219px;
+    padding: 18px 35px;
+    max-width: 423px;
+    height: auto;
     box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
         inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
     background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
-    margin-top: 35px;
+}
+.self__call__text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    color: #000;
+    margin-top: 0;
+}
+.self__call__location__name {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    color: #4c4c4c;
+    margin-bottom: 0;
+}
+.self__call__graphik {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: #4c4c4c;
+    margin-top: 0;
+}
+.self__call__free {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 0;
+}
+.delivery__content {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    border-radius: 24px;
+    padding: 18px;
+    width: 741px;
+    height: auto;
+    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+        inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+}
+.delivery__text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    color: #000;
+    opacity: 0.2;
+    margin: 0;
+}
+.delivery__district {
+    display: flex;
+    gap: 20px;
+}
+.districtChoose {
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    padding: 10px;
+    width: 299px;
+    height: 44px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: #888;
+    background: transparent;
+}
+.districtSpace {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cityChoose {
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    padding: 10px;
+    width: 299px;
+    height: 44px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: #888;
+    background: transparent;
+}
+.citySpace {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.delivery__street {
+    display: flex;
+    gap: 20px;
+}
+.street {
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    padding: 10px;
+    width: 299px;
+    height: 44px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: #888;
+    background: transparent;
+}
+.home {
+    border: 1px solid #d4d4d4;
+    border-radius: 10px;
+    padding: 10px;
+    width: 299px;
+    height: 44px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    color: #888;
+    background: transparent;
+}
+.delivery__price {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    color: #000;
+    margin-bottom: 0;
+}
+.paymentMethod {
+    margin-top: 120px;
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+}
+.paymentMethod__title {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.paymentMethod__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 30px;
+    color: #000;
+}
+.bankCard {
+    border-radius: 10px;
+    padding: 0px 10px;
+    width: 297px;
+    height: 135px;
+    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+        inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+}
+.bankCard__text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+}
+.bankCard__images img {
+    object-fit: cover;
+}
+.onlineWallet {
+    border: 3px solid #fff;
+    border-radius: 10px;
+    padding: 0px 10px;
+    width: 297px;
+    height: 135px;
+    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+        inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+}
+.onlineWallet__text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    color: #000;
+}
+.onlineWallet__images img {
+    object-fit: cover;
+}
+.cashPayment {
+    border-radius: 10px;
+    padding: 10px;
+    width: 298px;
+    height: auto;
+    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+        inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+}
+
+.cashPayment__text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 196%;
+    color: #000;
+    margin: 14px;
+}
+.installments {
+    border-radius: 10px;
+    padding: 10px;
+    width: 298px;
+    height: auto;
+    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+        inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+}
+.installments__text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 196%;
+    color: #000;
+    margin: 14px;
+}
+.qrcode {
+    margin: 130px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.qrcode__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 30px;
+    color: #000;
+    margin: 0;
+}
+.qrcode__img {
+    object-fit: cover;
+}
+.qrcode__button__title {
+    margin-left: auto;
+}
+.qrcode__button {
+    border-radius: 20px;
+    width: 295px;
+    height: 61px;
+    box-shadow: 16px 16px 64px 0 rgba(18, 61, 101, 0.48),
+        -16px -16px 40px 0 rgba(255, 255, 255, 0.8);
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 300%;
+    text-align: center;
+    color: #000;
+    border: none;
+}
+.accept {
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+.testPay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.checkmarkAccept {
+    object-fit: cover;
+    width: 90px;
+    height: 90px;
+}
+.ThanksForPay {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 200%;
+    text-align: center;
+    color: #000;
+}
+.resultPay {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 300%;
+    text-align: center;
+    color: #000;
+}
+.details {
+    border-radius: 10px;
+    padding: 0px 17px;
+    width: 340px;
+    height: auto;
+    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+        inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.details__text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 300%;
+    text-align: center;
+    color: #000;
+    margin-top: 0;
+}
+.detail__name {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 200%;
+    text-align: center;
+    color: #000;
+    margin: 0;
+}
+.detail__price {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 200%;
+    text-align: center;
+    color: #000;
+    margin: 0;
+}
+.detail__typeDelivery {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 200%;
+    text-align: center;
+    color: #000;
+    margin: 0;
+}
 
-    &__box {
+
+@media screen and (max-width: 1260px) {
+    .paymentMethod {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 950px) {
+    .basket__title__name {
+        font-size: 20px;
+        max-width: 280px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .qrcode {
+        margin: 50px 0;
+    }
+    .qrcode__text {
+        font-size: 15px;
+    }
+    .qrcode__button__title {
+        margin: 0;
+    }
+    .basket__buy {
         display: flex;
         justify-content: center;
     }
-    &__title {
-        font-family: var(--font-family);
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 80%;
+    .basket__get {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .basket__getLogo {
         text-align: center;
-        color: #000;
     }
-}
-@media screen and (max-width: 531px) {
-    .basket__info {
-        height: 190px;
+    .basket__checkbox {
+        display: flex;
+        justify-content: center;
     }
-    .basket__info__title {
-        font-size: 25px;
+    .nameFromBasket {
+        font-size: 15px;
+        height: 50px;
     }
-}
-
-@media screen and (max-width: 364px) {
-    .basket__info {
-        height: 160px;
+    .phoneFromBasket {
+        font-size: 15px;
+        height: 50px;
     }
-    .basket__info__title {
+    .emailFromBasket {
+        font-size: 15px;
+        height: 50px;
+    }
+    .buyFromBasket {
+        font-size: 15px;
+        width: 220px;
+        height: 50px;
+    }
+    .basket__getLogo {
         font-size: 20px;
+    }
+    .basketToLogin {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .accept {
+        gap: 40px;
+    }
+    .delivery__text {
+        margin: 0 auto;
+    }
+    .delivery__price {
+        margin: 0 auto;
+    }
+    .delivery__district {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .delivery__street {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 400px) {
+    .paymentMethod {
+        margin-top: 30px;
+    }
+    .paymentMethod__text {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 15px;
+    }
+    .qrcode__button {
+        width: 200px;
+    }
+    .bankCard {
+        display: flex;
+        flex-direction: column;
+        width: 260px;
+    }
+    .delivery {
+        display: flex;
+        gap: 20px;
+    }
+    .self__call__text,
+    .self__call__location__name,
+    .self__call__graphik,
+    .self__call__free,
+    .delivery__text,
+    .delivery__price {
+        font-size: 15px;
+        text-align: center;
+    }
+    .districtChoose,
+    .cityChoose,
+    .street,
+    .home {
+        width: 200px;
     }
 }
