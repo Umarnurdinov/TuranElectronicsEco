@@ -1,0 +1,128 @@
+.mainSlider {
+  margin: 40px 0;
+  .copterMain img {
+    border-radius: 20px;
+    max-width: 1249px;
+    height: 282px;
+  }
+
+  .dysonslider img {
+    border-radius: 20px;
+    max-width: 1249px;
+    height: 282px;
+  }
+
+  .xiaomislider img {
+    border-radius: 20px;
+    object-fit: cover;
+    width: 1249px;
+    height: 282px;
+  }
+}
+.slick-next {
+  right: 20px !important;
+}
+.slick-next:before {
+  content: ">" !important;
+  font-size: 40px !important;
+  background-color: none !important;
+  line-height: 0 !important;
+  color: #ff7300 !important;
+}
+.slick-prev {
+  left: 20px !important;
+  position: relative;
+  z-index: 3;
+}
+.slick-prev:before {
+  content: "<" !important;
+  font-size: 40px !important;
+  background-color: none !important;
+  line-height: 0 !important;
+  color: #ff7300 !important;
+}
+.slick-dots {
+  color: #ff7300 !important;
+}
+@media screen and (max-width: 1100px) {
+  .copterMain img,
+  .dysonslider img,
+  .xiaomislider img {
+    max-width: 1100px !important;
+    object-fit: cover !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .copterMain img,
+  .dysonslider img,
+  .xiaomislider img {
+    max-width: 1000px !important;
+    object-fit: cover !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .copterMain img,
+  .dysonslider img,
+  .xiaomislider img {
+    max-width: 900px !important;
+    object-fit: cover !important;
+  }
+}
+@media screen and (max-width: 800px) {
+  .copterMain img,
+  .dysonslider img,
+  .xiaomislider img {
+    max-width: 800px !important;
+    object-fit: cover !important;
+  }
+}
+@media screen and (max-width: 700px) {
+  .copterMain img,
+  .dysonslider img,
+  .xiaomislider img {
+    max-width: 700px !important;
+    object-fit: cover !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .copterMain img,
+  .dysonslider img,
+  .xiaomislider img {
+    max-width: 600px !important;
+    object-fit: cover !important;
+  }
+}
+@media screen and (max-width: 500px) {
+  .copterMain img,
+  .dysonslider img,
+  .xiaomislider img {
+    max-width: 500px !important;
+    height: 170px !important;
+    object-fit: cover !important;
+  }
+  .slick-next,
+  .slick-prev {
+    display: none !important;
+  }
+  .slick-dots li {
+    margin: 0 !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .copterMain img,
+  .dysonslider img,
+  .xiaomislider img {
+    max-width: 400px !important;
+    height: 140px !important;
+    object-fit: cover !important;
+  }
+}
+@media screen and (max-width: 310px) {
+  .copterMain img,
+  .dysonslider img,
+  .xiaomislider img {
+    max-width: 310px !important;
+    height: 110px !important;
+    object-fit: cover !important;
+  }
+}
