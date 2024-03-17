@@ -1,10 +1,14 @@
-import ItemAddmission from "../itemAddmission/index2";
-import "./style.scss";
-import product from "../../assets/phone.png";
+import React from "react";
+import "./accessories.scss";
+import arrowalac from "../../assets/arrowRight.png";
+import arrowarac from "../../assets/arrowLeft.png";
+import adapter from "../../assets/image17.png";
+import { Link } from "react-router-dom";
+import AccessoriesCard from "../accessoriesCard";
 
 export const data = [
   {
-    img: { product },
+    img: { adapter },
     price: 200,
     title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
     description:
@@ -24,7 +28,7 @@ export const data = [
     inStock: true,
   },
   {
-    img: { product },
+    img: { adapter },
     price: 700,
     title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
     description:
@@ -36,7 +40,7 @@ export const data = [
     inStock: false,
   },
   {
-    img: { product },
+    img: { adapter },
     price: 3000,
     title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
     description:
@@ -48,7 +52,7 @@ export const data = [
     inStock: true,
   },
   {
-    img: { product },
+    img: { adapter },
     price: 3000,
     title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
     description:
@@ -60,18 +64,42 @@ export const data = [
     inStock: false,
   },
 ];
-
-function List() {
+const Accessories = () => {
   return (
-    <div className="container">
-      <h1 className="list__title">Новое поступление</h1>
-      <div className="list">
-        {data.map((el) => (
-          <ItemAddmission data={el} />
-        ))}
+    <div className="accessories">
+      <div className="container">
+        <div className="accessories">
+          <div className="accessories__titlemain">
+            <div className="accessories__title">
+              <h1 className="accessoriesText">Аксессуары</h1>
+            </div>
+            <div className="accessories__btns">
+              <p className="lookAll">Смотреть все</p>
+              <button className="btnLeft">
+                <img
+                  className="leftArrow"
+                  src={arrowarac}
+                  alt="Левая-Стрелка-Аксессуары"
+                />
+              </button>
+              <button className="btnRight">
+                <img
+                  className="rightArrow"
+                  src={arrowalac}
+                  alt="Правая-Стрелка-Аксессуары"
+                />
+              </button>
+            </div>
+          </div>
+          <div className="accessories__blockmain">
+            {data.map((el, index) => (
+              <Accessories data={el} key={index} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
-}
+};
 
-export default List;
+export default Accessories;
