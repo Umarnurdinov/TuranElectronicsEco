@@ -1,20 +1,15 @@
-import stargray from "../../assets/emptyStar.svg";
-import star from "../../assets/fullStar.svg";
 import adapter from "../../assets/image17.png";
 import basket from "../../assets/basket.svg";
 import React from "react";
 import "./style.scss";
+import StarRating from "../starRating";
 
-function AccessoriesCard() {
+function AccessoriesCard({ data }) {
   return (
     <>
       <div className="accessories__block">
         <div className="accessories__block__stars">
-          <img src={star} alt="Звезда" />
-          <img src={star} alt="Звезда" />
-          <img src={stargray} alt="Серая-Звезда" />
-          <img src={stargray} alt="Серая-Звезда" />
-          <img src={stargray} alt="Серая-Звезда" />
+          <StarRating rating={data.raiting} />
         </div>
         <div className="accessories__block__img">
           <img src={adapter} alt="" />

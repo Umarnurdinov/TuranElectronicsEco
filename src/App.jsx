@@ -11,9 +11,10 @@ import Registration from "./pages/registration";
 import RegistrationAccept from "./pages/registrationAccept";
 import Login from "./pages/login";
 import ForgotPassword from "./pages/forgotPassword";
+import Product from "./pages/product";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Product from "./pages/product";
+import InfoProduct from "./components/infoProduct";
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -60,7 +61,7 @@ const routes = createBrowserRouter([
     element: <ForgotPassword />,
   },
   {
-    path: "/info",
+    path: "/about/product/:id",
     element: <Product />,
   },
 ]);
