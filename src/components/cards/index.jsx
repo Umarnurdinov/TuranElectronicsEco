@@ -17,7 +17,7 @@ function Cards() {
           </div>
         </div>
         <div className="cards">
-          <Recomends />
+          <Recomends  />
           <Recomends />
           <Recomends />
           <Recomends />

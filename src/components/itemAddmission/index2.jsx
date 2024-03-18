@@ -1,12 +1,3 @@
-// import React from 'react'
-
-// function ItemAddmission() {
-//   return (
-//     <div>ItemAddmission</div>
-//   )
-// }
-
-// export default ItemAddmission
 import React, { useEffect, useState } from "react";
 import "./style.scss";
 import product from "../../assets/phone.png";
@@ -19,11 +10,10 @@ import { useDispatch } from "react-redux";
 import likeFull from "../../assets/likeFull.png";
 
 function ItemAddmission({ data }) {
-    console.log(data);
     const [date, setDate] = useState(true);
     const [colors, setColors] = useState([]);
     const [counter, setCounter] = useState(0);
-
+    //choose color
     const [liked, setLiked] = useState(false);
 
     const dispatch = useDispatch();
@@ -70,6 +60,11 @@ function ItemAddmission({ data }) {
         data.favorite = !data.favorite;
         dispatch({ type: "LIKEPRODUCT", payload: data });
     }
+    function selectedColor(e, color) {
+        e.stopPropagation()
+        dispatch({ type: "CHOOSECOLOR", payload: color })
+    }
+    
     return (
         <div className="card" onClick={() => cardHandler(data.id)}>
             <div className="card__content">
@@ -169,6 +164,7 @@ function ItemAddmission({ data }) {
                                     key={index}
                                     className="card__content__black color "
                                     style={{ background: color }}
+                                    onClick={(e)=>selectedColor(e,color)}
                                 ></div>
                             ))}
                         </div>

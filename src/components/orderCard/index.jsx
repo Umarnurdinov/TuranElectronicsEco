@@ -7,10 +7,12 @@ import { useDispatch, useSelector } from "react-redux";
 
 function OrderCard({ order }) {
     const [count, setCount] = useState(0);
-    const [amountAll, setAmountAll] = useState(0);
 
     const [price, setPrice] = useState(order.price);
     const amount = useSelector((state) => state.basket.amount);
+    const colorProduct = useSelector((state) => state.basket.color);
+
+
     const dispatch = useDispatch();
 
     function minusFunc() {
@@ -28,9 +30,9 @@ function OrderCard({ order }) {
         dispatch({ type: "AMOUNTPLUS", payload: order.price });
     }
     function deleteProduct(id) {
+        console.log(order);
         dispatch({ type: "DELETEPRODUCT", payload: id });
         dispatch({ type: "AMOUNTMINUS", payload: order.price });
-
     }
 
     return (
@@ -59,7 +61,7 @@ function OrderCard({ order }) {
                     <div className="content__footer">
                         <h4 className="content__color">
                             Цвет:
-                            <div className="color "></div>
+                            <div className="color " style={{background:colorProduct}}></div>
                         </h4>
                         <div className="basket__footer__end">
                             <div className="basket__buttons">

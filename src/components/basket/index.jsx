@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.scss";
 import visa from "../../assets/visa.png";
 import mastercard from "../../assets/mastercard.png";
@@ -13,22 +13,25 @@ import { Button, Checkbox, Dropdown, Input, Space, message } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import OrderCard from "../orderCard";
-import { deleteAllProducts } from "../../store/basket"; 
-
+import { deleteAllProducts } from "../../store/basket";
 
 function BasketPage() {
-    const basketData = useSelector((state) => state.basket.products);
     const [btn, setBtn] = useState(false);
+    
+    const basketData = useSelector((state) => state.basket.products);
     const amount = useSelector((state) => state.basket.amount);
-    const dispatch=useDispatch()
+
+    const dispatch = useDispatch();
 
     const handleMenuClick = (e) => {
         message.info("Click on menu item.");
         console.log("click", console.log(e));
     };
+
     const oformiteHandler = () => {
         setBtn(true);
     };
+
     const items = [
         {
             label: "Чуй",
@@ -69,7 +72,7 @@ function BasketPage() {
         onClick: handleMenuClick,
     };
     const deleteAll = () => {
-        dispatch(deleteAllProducts()); 
+        dispatch(deleteAllProducts());
     };
 
     return (
@@ -87,13 +90,14 @@ function BasketPage() {
                             | Каталог
                         </Link>
                         <Link to={"/basket"} className="basketFromBasket">
-                            | Корзинаimport { deleteAllProducts } 
-
+                            | Корзинаimport {deleteAllProducts}
                         </Link>
                     </div>
                     <div className="basket__delete">
                         <p className="basket__logo">Корзина</p>
-                        <p className="deleteAll" onClick={deleteAll}>удалить все</p>
+                        <p className="deleteAll" onClick={deleteAll}>
+                            удалить все
+                        </p>
                     </div>
                     {basketData.length !== 0 ? (
                         <>
@@ -102,7 +106,6 @@ function BasketPage() {
                             ))}
                             <div className="basket__buy">
                                 <h1 className="total__amount">
-                                    {" "}
                                     Итого:{amount} сом
                                 </h1>
                                 <button
