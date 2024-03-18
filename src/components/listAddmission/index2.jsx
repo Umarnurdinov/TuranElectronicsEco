@@ -1,6 +1,7 @@
 import ItemAddmission from "../itemAddmission/index2";
 import "./style.scss";
 import product from "../../assets/phone.png";
+import Recomends from "../recomends";
 
 export const data = [
   {
@@ -62,16 +63,18 @@ export const data = [
 ];
 
 function List() {
-  return (
-    <div className="container">
-      <h1 className="list__title">Новое поступление</h1>
-      <div className="list">
-        {data.map((el) => (
-          <ItemAddmission data={el} />
-        ))}
-      </div>
-    </div>
-  );
+    return (
+        <div className="container">
+            <h1 className="list__title">Новое поступление</h1>
+            <div className="list">
+                {data.map((el) => (
+                    <>
+                        <ItemAddmission data={el} />
+                    </>
+                ))}
+            </div>
+        </div>
+    );
 }
 
 export default List;
