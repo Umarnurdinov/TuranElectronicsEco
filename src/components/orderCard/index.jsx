@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import product from "../../assets/phone.png";
+import watch from "../../assets/watch.png";
 import deleteicon from "../../assets/deleteicon.svg";
 import StarRating from "../starRating";
 import "./style.scss";
@@ -30,7 +31,6 @@ function OrderCard({ order }) {
         dispatch({ type: "AMOUNTPLUS", payload: order.price });
     }
     function deleteProduct(id) {
-        console.log(order);
         dispatch({ type: "DELETEPRODUCT", payload: id });
         dispatch({ type: "AMOUNTMINUS", payload: order.price });
     }

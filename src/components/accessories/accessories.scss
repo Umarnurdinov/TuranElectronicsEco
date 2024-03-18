@@ -1,0 +1,93 @@
+.accessories {
+  ::-webkit-scrollbar {
+    display: none; /* Для Google Chrome, Safari и Opera */
+  }
+  .accessories__titlemain {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .accessories__btns {
+    display: flex;
+    gap: 20px;
+  }
+  .accessories__btns button {
+    border: 1px solid #fff;
+    border-radius: 30px;
+    width: 40px;
+    height: 40px;
+    box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48), -4px -2px 16px 0 #fff;
+    background: #e3edf7;
+    cursor: pointer;
+  }
+  .accessories__btns img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .accessories__blockmain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1150px;
+    height: 300px;
+    overflow-x: scroll;
+    background: none;
+
+    scrollbar-color: red;
+    // margin: 0 auto;
+  }
+  // .prive__tovar__block {
+  //     font-family: sans-serif;
+  //     margin-top: 20px;
+  // }
+  .fast__delivery {
+    border: 1px solid #fff;
+    border-radius: 16px;
+    width: 145px;
+    height: 30px;
+    box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48), -4px -2px 16px 0 #fff;
+    background: #e3edf7;
+    cursor: pointer;
+  }
+}
+.accessoriesText {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 200%;
+  color: #000;
+}
+@media screen and (max-width: 2000px) {
+  .lookAll {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  .lookAll {
+    display: flex;
+    font-family: var(--font-family);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 200%;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-align: center;
+    color: #000;
+  }
+  .accessoriesText {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    text-align: center;
+    color: #000;
+  }
+  .btnLeft,
+  .leftArrow,
+  .btnRight,
+  .rightArrow {
+    display: none;
+  }
+}

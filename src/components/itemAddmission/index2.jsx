@@ -16,25 +16,25 @@ function ItemAddmission({ data }) {
     //choose color
     const [liked, setLiked] = useState(false);
 
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-    const nav = useNavigate();
+  const nav = useNavigate();
 
-    useEffect(() => {
-        setLiked(data.favorite);
-        const currentDate = new Date().getTime();
+  useEffect(() => {
+    setLiked(data.favorite);
+    const currentDate = new Date().getTime();
 
-        const millysecondDiff = currentDate - data.date;
+    const millysecondDiff = currentDate - data.date;
 
-        const daysMinus = Math.floor(millysecondDiff / 1000 / 60 / 60 / 24);
+    const daysMinus = Math.floor(millysecondDiff / 1000 / 60 / 60 / 24);
 
-        if (daysMinus > 4) {
-            setDate(false);
-        }
-    }, []);
-    useEffect(() => {
-        setColors(data.colors);
-    }, []);
+    if (daysMinus > 4) {
+      setDate(false);
+    }
+  }, []);
+  useEffect(() => {
+    setColors(data.colors);
+  }, []);
 
     function favoritePage() {
         nav(`/about/product/${id}`);
@@ -94,40 +94,32 @@ function ItemAddmission({ data }) {
                             />
                         </div>
 
-                        <div className="card__infos__prices">
-                            {data.inStock ? (
-                                <>
-                                    <img
-                                        src={check}
-                                        alt=""
-                                        className="card__infos__check"
-                                    />
-                                    <span className="card__infos__sale__title">
-                                        В наличии
-                                    </span>
-                                </>
-                            ) : null}
+            <div className="card__infos__prices">
+              {data.inStock ? (
+                <>
+                  <img src={check} alt="" className="card__infos__check" />
+                  <span className="card__infos__sale__title">В наличии</span>
+                </>
+              ) : null}
 
-                            <div className="card__infos__sale">
-                                <span className="card__info__price">
-                                    {`${data.price} сом`}
-                                </span>
-                                <div className=" card__infos__basket  content__basket__adap">
-                                    <img
-                                        onClick={(e) => basketHandler(e)}
-                                        src={basket}
-                                        alt=""
-                                        className="card__content__basket__img"
-                                    />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div className="card__infos__sale">
+                <span className="card__info__price">{`${data.price} сом`}</span>
+                <div className=" card__infos__basket  content__basket__adap">
+                  <img
+                    onClick={(e) => basketHandler(e)}
+                    src={basket}
+                    alt=""
+                    className="card__content__basket__img"
+                  />
                 </div>
-                <div className="card__content__second">
-                    <div className="second__star">
-                        <StarRating rating={data.rating} />
-                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="card__content__second">
+          <div className="second__star">
+            <StarRating rating={data.rating} />
+          </div>
 
                     <div className="card__infos">
                         <div className="card__info">
@@ -175,17 +167,17 @@ function ItemAddmission({ data }) {
                             {`${data.price} сом`}
                         </span>
 
-                        <img
-                            onClick={(e) => basketHandler(e)}
-                            src={basket}
-                            alt=""
-                            className="card__content__basket__img"
-                        />
-                    </div>
-                </div>
-            </div>
+            <img
+              onClick={(e) => basketHandler(e)}
+              src={basket}
+              alt=""
+              className="card__content__basket__img"
+            />
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default ItemAddmission;

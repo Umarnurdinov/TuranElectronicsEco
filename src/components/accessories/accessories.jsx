@@ -1,13 +1,15 @@
 import React from "react";
-import Recomends from "../recomends";
-import btnnext from "../../assets/btnNext.svg";
-import "./style.scss";
-import watch from "../../assets/watch.png";
+import "./accessories.scss";
+import arrowalac from "../../assets/arrowRight.png";
+import arrowarac from "../../assets/arrowLeft.png";
+import adapter from "../../assets/image17.png";
+import { Link } from "react-router-dom";
+import AccessoriesCard from "../accessoriesCard";
 
 export const data = [
   {
-    img: { watch },
-    price: 3000,
+    img: { adapter },
+    price: 200,
     title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
     description:
       "iPhone 14 Pro MaxВолшебный новый способ взаимодействия с iPhone. .....",
@@ -26,8 +28,8 @@ export const data = [
     inStock: true,
   },
   {
-    img: { watch },
-    price: 3000,
+    img: { adapter },
+    price: 700,
     title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
     description:
       "iPhone 14 Pro MaxВолшебный новый способ взаимодействия с iPhone. .....",
@@ -38,7 +40,7 @@ export const data = [
     inStock: false,
   },
   {
-    img: { watch },
+    img: { adapter },
     price: 3000,
     title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
     description:
@@ -50,7 +52,7 @@ export const data = [
     inStock: true,
   },
   {
-    img: { watch },
+    img: { adapter },
     price: 3000,
     title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
     description:
@@ -62,39 +64,42 @@ export const data = [
     inStock: false,
   },
 ];
-
-function Cards() {
+const Accessories = () => {
   return (
-    <>
+    <div className="accessories">
       <div className="container">
-        <div className="recomended__title">
-          <h1 className="recomended__text">Рекомендуемые</h1>
-          <div className="recomended__lookAll">
-            <a className="lookAll__text">Смотреть все</a>
-            <a className="lookAll__btn">
-              <img src={btnnext} alt="#" />
-            </a>
+        <div className="accessories">
+          <div className="accessories__titlemain">
+            <div className="accessories__title">
+              <h1 className="accessoriesText">Аксессуары</h1>
+            </div>
+            <div className="accessories__btns">
+              <p className="lookAll">Смотреть все</p>
+              <button className="btnLeft">
+                <img
+                  className="leftArrow"
+                  src={arrowarac}
+                  alt="Левая-Стрелка-Аксессуары"
+                />
+              </button>
+              <button className="btnRight">
+                <img
+                  className="rightArrow"
+                  src={arrowalac}
+                  alt="Правая-Стрелка-Аксессуары"
+                />
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="cards">
-          {data.map((el) => (
-            <Recomends Newdata={el} />
-          ))}
-        </div>
-        <div className="recomends__footer">
-          <div className="recomends__footer__title"></div>
-          <div className="recomends__footer__title2">
-            <button className="firstPage">1</button>
-            <button className="secondPage">2</button>
-            <button className="thirdPage">3</button>
-            <button className="nextPage">
-              <img src={btnnext} alt="#" />
-            </button>
+          <div className="accessories__blockmain">
+            {data.map((el, index) => (
+              <Accessories data={el} key={index} />
+            ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
 
-export default Cards;
+export default Accessories;
