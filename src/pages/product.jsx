@@ -5,10 +5,12 @@ import Facilities from "../components/facilities/facilities";
 import InfoProduct from "../components/infoProduct";
 import Review from "../components/review";
 import { useParams } from "react-router-dom";
+// import { data } from "../components/infoProduct";
 
 function Product() {
   const { id } = useParams();
   const [data, setData] = useState({});
+  useState;
   useEffect(() => {
     const product = arrayProduct.find((el) => el.id == id);
     if (product) {

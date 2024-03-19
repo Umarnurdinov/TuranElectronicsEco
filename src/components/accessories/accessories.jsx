@@ -93,7 +93,7 @@ const Accessories = () => {
           </div>
           <div className="accessories__blockmain">
             {data.map((el, index) => (
-              <Accessories data={el} key={index} />
+              <AccessoriesCard data={el} key={index} />
             ))}
           </div>
         </div>
