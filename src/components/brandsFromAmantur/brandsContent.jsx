@@ -21,14 +21,14 @@ function BrandsContent() {
         <div className="container">
           <div className="brands__component">
             <div className="dysonbrand">
-              <Link to={"/dysonbrand"}>
+              <Link to={"/dysonPage"}>
                 <img className="dysonimg" src={dysonbrand} alt="#" />
                 <button className="dysonbtn">Dyson</button>
               </Link>
             </div>
             <div className="apple__block">
               <div className="apple__brand">
-                <Link to={"/applebrand"}>
+                <Link to={"/applePage"}>
                   <div className="apple__img">
                     <img className="appleimg" src={applebrand} alt="#" />
                     <button className="applebtn">Apple</button>
@@ -36,7 +36,7 @@ function BrandsContent() {
                 </Link>
               </div>
               <div className="xiaomi__brand">
-                <Link to={"/xiaomibrand"}>
+                <Link to={"/xiaomiPage"}>
                   <div className="xiaomi__img">
                     <img className="xiaomiimg" src={xiaomi} alt="#" />
                     <button className="xiaomibtn">Xiaomi</button>
@@ -46,7 +46,7 @@ function BrandsContent() {
             </div>
             <div className="samsung__block">
               <div className="samsung__brand">
-                <Link to={"/samsungbrand"}>
+                <Link to={"/samsungPage"}>
                   <div className="samsung__img">
                     <img className="samsungimg" src={samsung} alt="#" />
                     <button className="samsungbtn">Samsung</button>
@@ -54,7 +54,7 @@ function BrandsContent() {
                 </Link>
               </div>
               <div className="sony__brand">
-                <Link to={"/sonybrand"}>
+                <Link to={"/sonyPage"}>
                   <div className="sony__img">
                     <img className="sonyimg" src={sonyps} alt="#" />
                     <button className="sonybtn">Sony Playstation</button>
