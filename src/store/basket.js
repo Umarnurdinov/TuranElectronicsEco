@@ -3,12 +3,12 @@ const ADDPRODUCT = "ADDPRODUCT";
 const DELETEPRODUCT = "DELETEPRODUCT";
 const DELETEPRODUCTALL = "DELETEPRODUCTALL";
 const AMOUNTPLUS = "AMOUNTPLUS";
-const AMOUNTMINUS= "AMOUNTMINUS";
-
+const AMOUNTMINUS = "AMOUNTMINUS";
+const CHOOSECOLOR="CHOOSECOLOR"
 
 export const deleteAllProducts = () => {
     return {
-        type: DELETEPRODUCTALL
+        type: DELETEPRODUCTALL,
     };
 };
 
@@ -17,7 +17,9 @@ const initialState = {
     products: [],
     price: 0,
     amount: 0,
+    color:[],
 };
+
 function basketReducer(state = initialState, action) {
     switch (action.type) {
         case ADDPRODUCT:
@@ -37,36 +39,43 @@ function basketReducer(state = initialState, action) {
         case DELETEPRODUCT:
             return {
                 ...state,
-                counter: (state.counter -= 1),
+                counter: state.counter - 1,
                 products: state.products.filter(
-                    (el) => el.id !== action.payload
+                    (el) => el.id != action.payload
                 ),
             };
-   
 
         case AMOUNTPLUS:
             const newState2 = { ...state };
-            newState2.amount += action.payload ;
+            newState2.amount += action.payload;
             return newState2;
-            case AMOUNTMINUS:
-                const newState3 = { ...state };
-                newState3.amount -= action.payload ;
-                return newState3;
+        case AMOUNTMINUS:
+            const newState3 = { ...state };
+            newState3.amount -= action.payload;
+            return newState3;
 
+        // Добавьте новый case в reducer
+        case DELETEPRODUCTALL:
+            return {
+                ...state,
+                counter: 0,
+                products: [],
+                price: 0,
+                amount: 0,
+                color:[],
+            };
+            case CHOOSECOLOR:
+                const newStateColor = { ...state };
+                newStateColor.color.push(action.payload);
 
-// Добавьте новый case в reducer
-case DELETEPRODUCTALL:
-    return {
-        ...state,
-        counter: 0,
-        products: [],
-        price: 0,
-        amount: 0
-    };
+                return newStateColor
+    
+              
+            
 
-      
         default:
             return state;
+            
     }
 }
 export default basketReducer;
