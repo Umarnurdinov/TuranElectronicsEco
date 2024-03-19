@@ -7,8 +7,6 @@ import Review from "../components/review";
 import { useParams } from "react-router-dom";
 import { data } from "../components/listAddmission/index2";
 
-
-
 function Product() {
     const { id } = useParams();
     const [dataProduct, setDataProduct] = useState({});
@@ -17,14 +15,13 @@ function Product() {
         if (product) {
             setDataProduct(product);
         }
-
     }, []);
 
     return (
         <>
             <Header />
             <Facilities />
-            <InfoProduct infoProd={dataProduct}/>
+            <InfoProduct infoProd={dataProduct} />
             <Review />
             <Footer />
         </>

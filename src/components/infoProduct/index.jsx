@@ -1,19 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import { useDispatch } from "react-redux";
+
 import iphone14 from "../../assets/iphone14.png";
 import iphone14camera from "../../assets/iphone14Camera.png";
 import iphone14width from "../../assets/iphone14width.png";
 import iphone14back from "../../assets/iphone14back.png";
 import iphone14allcamera from "../../assets/iphone14allcamera.png";
-import fullStar from "../../assets/fullStar.svg";
-import star from "../../assets/emptyStar.svg";
 import like from "../../assets/like.svg";
-import { Swiper, SwiperSlide } from "swiper/react";
-import Slider from "react-slick";
-import { useDispatch } from "react-redux";
 import likeFull from "../../assets/likeFull.png";
-
-
 
 import "swiper/css";
 import "./style.scss";
@@ -28,28 +24,27 @@ const settings = {
 };
 
 function InfoProduct({ infoProd }) {
-  const [selectImg, setSelected] = useState(null);
-  const [counter, setCounter] = useState(0);
-  const [liked, setLiked] = useState(false);
-  const dispatch =useDispatch()
+    const [selectImg, setSelected] = useState(null);
+    const [counter, setCounter] = useState(0);
+    const [liked, setLiked] = useState(false);
+    const dispatch = useDispatch();
 
-
-  function likeHandler(e) {
-    e.stopPropagation();
-    setLiked(!liked);
-    dispatch({ type: "LIKEPRODUCT", payload: infoProd });
-}
+    function likeHandler(e) {
+        e.stopPropagation();
+        setLiked(!liked);
+        dispatch({ type: "LIKEPRODUCT", payload: infoProd });
+    }
 
     const handleImageClick = (image) => {
         setSelected(image);
     };
     function basketHandler(e) {
-      e.stopPropagation();
-      setCounter(counter + 1);
-      dispatch({ type: "ADDPRODUCT", payload: infoProd });
-      dispatch({ type: "AMOUNTPLUS", payload: infoProd.price });
+        e.stopPropagation();
+        setCounter(counter + 1);
+        dispatch({ type: "ADDPRODUCT", payload: infoProd });
+        dispatch({ type: "AMOUNTPLUS", payload: infoProd.price });
     }
-    
+
     return (
         <>
             <div className="info">
@@ -208,11 +203,15 @@ function InfoProduct({ infoProd }) {
                                 {infoProd.price} сом
                             </h1>
                             <div className="info__content__pretitle__btns">
-                                <button onClick={basketHandler} className="toBasket">В корзину</button>
+                                <button
+                                    onClick={basketHandler}
+                                    className="toBasket"
+                                >
+                                    В корзину
+                                </button>
                                 <img
                                     src={liked ? likeFull : like}
                                     onClick={(e) => likeHandler(e)}
-
                                     alt="#"
                                     className="toFavorite"
                                 />

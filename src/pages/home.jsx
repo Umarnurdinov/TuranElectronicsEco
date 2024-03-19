@@ -9,6 +9,8 @@ import BrandsContent from "../components/brandsFromAmantur/brandsContent";
 import MainSlider from "../components/mainslider/mainSlider";
 import Accessories from "../components/accessories/accessories";
 import List from "../components/listAddmission/index2";
+import Filter from "../components/dropdown";
+import Review from "../components/review";
 
 function Home() {
   return (
@@ -21,6 +23,7 @@ function Home() {
       <List />
       <Cards />
       <Brands />
+      <Review />
       <Footer />
     </>
   );
