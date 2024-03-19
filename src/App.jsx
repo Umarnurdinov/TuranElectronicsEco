@@ -15,59 +15,64 @@ import Product from "./pages/product";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import InfoProduct from "./components/infoProduct";
+import Layout from "./components/layout";
 const routes = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/favorite",
-    element: <FavoriteEmpty />,
-  },
-  {
-    path: "/categories",
-    element: <Categories />,
-  },
-  {
-    path: "/news",
-    element: <News />,
-  },
-  {
-    path: "/aboutUs",
-    element: <AboutUs />,
-  },
-  {
-    path: "/basket",
-    element: <Basket />,
-  },
-  {
-    path: "/favorite",
-    element: <Favorite />,
-  },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/registration",
-    element: <Registration />,
-  },
-  {
-    path: "/registration/accept",
-    element: <RegistrationAccept />,
-  },
-  {
-    path: "/forgot",
-    element: <ForgotPassword />,
-  },
-  {
-    path: "/about/product/:id",
-    element: <Product />,
-  },
+    {
+        path: "/",
+        element: <Home />,
+    },
+    {
+        path: "/favorite",
+        element: <FavoriteEmpty />,
+    },
+    {
+        path: "/categories",
+        element: <Categories />,
+    },
+    {
+        path: "/news",
+        element: <News />,
+    },
+    {
+        path: "/aboutUs",
+        element: <AboutUs />,
+    },
+    {
+        path: "/basket",
+        element: <Basket />,
+    },
+    {
+        path: "/favorite",
+        element: <Favorite />,
+    },
+    {
+        path: "/login",
+        element: <Login />,
+    },
+    {
+        path: "/registration",
+        element: <Registration />,
+    },
+    {
+        path: "/registration/accept",
+        element: <RegistrationAccept />,
+    },
+    {
+        path: "/forgot",
+        element: <ForgotPassword />,
+    },
+    {
+        path: "/about/product/:id",
+        element: <Product />,
+    },
 ]);
 
 function App() {
-  return <RouterProvider router={routes} />;
+    return (
+        <Layout>
+            <RouterProvider router={routes} />
+        </Layout>
+    );
 }
 
 export default App;

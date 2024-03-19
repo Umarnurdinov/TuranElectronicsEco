@@ -4,7 +4,7 @@ import btnnext from "../../assets/btnNext.svg";
 import "./style.scss";
 import watch from "../../assets/watch.png";
 
-export const data = [
+ const data = [
   {
     img: { watch },
     price: 3000,
