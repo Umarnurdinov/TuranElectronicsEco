@@ -31,7 +31,7 @@ function ItemAddmission({ data }) {
     if (daysMinus > 4) {
       setDate(false);
     }
-  }, []);
+  }, [])
   useEffect(() => {
     setColors(data.colors);
   }, []);
@@ -57,7 +57,7 @@ function ItemAddmission({ data }) {
     function likeHandler(e) {
         e.stopPropagation();
         setLiked(!liked);
-        data.favorite = !data.favorite;
+        // data.favorite = !data.favorite;
         dispatch({ type: "LIKEPRODUCT", payload: data });
     }
     function selectedColor(e, color) {

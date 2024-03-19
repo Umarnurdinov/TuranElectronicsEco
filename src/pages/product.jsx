@@ -5,28 +5,27 @@ import Facilities from "../components/facilities/facilities";
 import InfoProduct from "../components/infoProduct";
 import Review from "../components/review";
 import { useParams } from "react-router-dom";
-// import { data } from "../components/infoProduct";
+import { data } from "../components/listAddmission/index2";
 
 function Product() {
-  const { id } = useParams();
-  const [data, setData] = useState({});
-  useState;
-  useEffect(() => {
-    const product = arrayProduct.find((el) => el.id == id);
-    if (product) {
-      setData(product);
-    }
-  }, [id]);
-  return (
-    <>
-      <Header />
-      <p>{data.description}</p>
-      <Facilities />
-      <InfoProduct />
-      <Review />
-      <Footer />
-    </>
-  );
+    const { id } = useParams();
+    const [dataProduct, setDataProduct] = useState({});
+    useEffect(() => {
+        const product = data.find((el) => el.id == id);
+        if (product) {
+            setDataProduct(product);
+        }
+    }, []);
+
+    return (
+        <>
+            <Header />
+            <Facilities />
+            <InfoProduct infoProd={dataProduct} />
+            <Review />
+            <Footer />
+        </>
+    );
 }
 
 export default Product;

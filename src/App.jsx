@@ -20,6 +20,7 @@ import DysonPage from "./components/dysonPage";
 import SamsungPage from "./components/samsungPage";
 import SonyPage from "./components/sonyPage";
 import XiaomiPage from "./components/xiaomiPage";
+import Layout from "./components/layout";
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -92,7 +93,11 @@ const routes = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={routes} />;
+    return (
+        <Layout>
+            <RouterProvider router={routes} />
+        </Layout>
+    );
 }
 
 export default App;

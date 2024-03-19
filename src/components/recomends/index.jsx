@@ -13,7 +13,6 @@ import { useDispatch } from "react-redux";
 import StarRating from "../starRating";
 
 function Recomends({ Newdata }) {
-  console.log(Newdata);
   const [date, setDate] = useState(true);
   const [colors, setColors] = useState([]);
   const [counter, setCounter] = useState(0);
