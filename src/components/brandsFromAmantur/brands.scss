@@ -1,0 +1,191 @@
+.brands__component {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 20px;
+
+  .dysonbrand {
+    border-radius: 24px;
+    width: 399px;
+    height: 647px;
+    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+      inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+    padding: 0;
+    position: relative;
+  }
+  .dysonbrand button {
+    position: absolute;
+    bottom: 20px;
+    left: 55px;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    width: 261px;
+    height: 45px;
+    box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48), -4px -2px 16px 0 #fff;
+    background: #e3edf7;
+    font-weight: 500;
+    font-size: 25px;
+    color: #000;
+    cursor: pointer;
+  }
+  .apple__brand {
+    border-radius: 24px;
+    width: 399px;
+    height: 315px;
+    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+      inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+    position: relative;
+  }
+
+  .xiaomi__brand {
+    border-radius: 24px;
+    width: 399px;
+    height: 315px;
+    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+      inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+    margin-top: 18px;
+    position: relative;
+  }
+  .samsung__brand {
+    border-radius: 24px;
+    width: 399px;
+    height: 315px;
+    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+      inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+    position: relative;
+  }
+  .sony__brand {
+    border-radius: 24px;
+    width: 399px;
+    height: 315px;
+    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+      inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+    margin-top: 18px;
+    position: relative;
+  }
+
+  .apple__brand button {
+    border: 1px solid #fff;
+    border-radius: 16px;
+    width: 261px;
+    height: 45px;
+    box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48), -4px -2px 16px 0 #fff;
+    background: #e3edf7;
+    position: absolute;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 25px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 60px;
+    bottom: 25px;
+  }
+
+  .xiaomi__brand button {
+    border: 1px solid #fff;
+    border-radius: 16px;
+    width: 261px;
+    height: 45px;
+    box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48), -4px -2px 16px 0 #fff;
+    background: #e3edf7;
+    position: absolute;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 25px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 60px;
+    bottom: 25px;
+  }
+  .samsung__brand button {
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    width: 261px;
+    height: 45px;
+    box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48), -4px -2px 16px 0 #fff;
+    background: #e3edf7;
+    position: absolute;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 25px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 60px;
+    bottom: 25px;
+  }
+  .sony__brand button {
+    border: 1px solid #fff;
+    border-radius: 16px;
+    width: 261px;
+    height: 45px;
+    box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48), -4px -2px 16px 0 #fff;
+    background: #e3edf7;
+    position: absolute;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 25px;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 60px;
+    bottom: 25px;
+  }
+
+  .skeleton-loader-background {
+    width: 100%;
+    height: 15px;
+    display: block;
+    background: rgb(188, 184, 184);
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .brandsForAdaptive__content {
+    display: none;
+  }
+}
+@media screen and (max-width: 436px) {
+  .brandsForAdaptive__content {
+    display: flex;
+    align-items: center;
+  }
+  .brands {
+    display: none;
+  }
+  .dysonForAdaptive,
+  .appleForAdaptive,
+  .xiaomiForAdaptive,
+  .samsungForAdaptive,
+  .sonyForAdaptive {
+    width: 90px !important;
+    height: 90px !important;
+    border-radius: 100% !important;
+    fill: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%) !important;
+    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+      inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .xiaomimini {
+    width: 62px;
+    height: 49px;
+  }
+  .swiper-backface-hidden .swiper-slide {
+    margin: 10px !important;
+  }
+}

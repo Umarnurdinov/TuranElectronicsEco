@@ -5,7 +5,7 @@
   gap: 20px;
 }
 .brands__text {
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 30px;
   line-height: 200%;
@@ -15,7 +15,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 30px;
 }
 .apple {
@@ -87,6 +86,11 @@
   box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
     inset -8px 0 -6px 80px 0 rgba(255, 255, 255, 0.18);
   background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+}
+@media screen and (max-width: 1290px) {
+  .brands__img {
+    flex-wrap: wrap;
+  }
 }
 @media screen and (max-width: 470px) {
   .footer__brands {

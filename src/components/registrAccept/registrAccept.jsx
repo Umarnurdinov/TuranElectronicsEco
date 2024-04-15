@@ -6,11 +6,13 @@ import { Link } from "react-router-dom";
 import facebook from "../../assets/FacebookForLogin.svg";
 import google from "../../assets/GoogleForLogin.svg";
 import telegram from "../../assets/TelegramForLogin.svg";
+import { useSelector } from "react-redux";
 
 function RegistrAccept() {
   const onChange = (e) => {
     console.log(`checked = ${e.target.checked}`);
   };
+  const emailData = useSelector((state) => state.email.email);
   return (
     <>
       <div className="registrAccept">
