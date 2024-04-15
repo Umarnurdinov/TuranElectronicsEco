@@ -1,0 +1,36 @@
+.aboutUs__content {
+  padding: 40px 50px;
+  border-radius: 24px;
+  max-width: 1269px;
+  height: auto;
+  box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+    inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
+  background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+}
+.toAboutUs {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 300%;
+  color: #888;
+}
+.aboutUs__content__text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 300%;
+  color: #000;
+}
+@media screen and (max-width: 700px) {
+  .aboutUs__content__text {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .aboutUs__content {
+    padding: 10px 20px;
+  }
+  .aboutUs__content__text {
+    text-align: center;
+  }
+}

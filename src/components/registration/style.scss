@@ -3,7 +3,7 @@
   padding: 20px 0;
 }
 .registr__logo {
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 30px;
   line-height: 80%;
@@ -25,7 +25,7 @@
   opacity: 0.9;
 }
 .registr__content__title {
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 18px;
   line-height: 139%;
@@ -92,7 +92,7 @@
   height: 40px;
   box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48), -4px -2px 16px 0 #fff;
   background: #e3edf7;
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 18px;
   line-height: 133%;
@@ -105,7 +105,7 @@
 }
 .registr__text {
   margin: 8px;
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
   line-height: 133%;
@@ -118,7 +118,7 @@
   gap: 20px;
 }
 .login__link {
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
   line-height: 133%;
@@ -129,7 +129,7 @@
 }
 .otherlogintext {
   margin: 0;
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 18px;
   line-height: 133%;
@@ -156,13 +156,16 @@
   margin-left: 15pc;
 }
 .forgotPasswordLink {
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 15px;
   text-decoration: underline;
   text-decoration-skip-ink: none;
   color: #000;
   margin: 0;
+}
+.registrBtn {
+  color: #000;
 }
 @media screen and (max-width: 950px) {
   .registr__content {
@@ -175,13 +178,13 @@
   }
 }
 @media screen and (max-width: 500px) {
-  .login__reg{
+  .login__reg {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
-  .registr__logo{
-    font-family: Montserrat;
+  .registr__logo {
+    font-family: "Montserrat";
     font-size: 15px;
     font-weight: 400px;
     line-height: 24px;

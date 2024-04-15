@@ -5,25 +5,24 @@ import Facilities from "../components/facilities/facilities";
 import InfoProduct from "../components/infoProduct";
 import Review from "../components/review";
 import { useParams } from "react-router-dom";
-// import { data } from "../components/infoProduct";
+import { useSelector } from "react-redux";
 
 function Product() {
   const { id } = useParams();
-  const [data, setData] = useState({});
-  useState;
+  const [dataProduct, setDataProduct] = useState({});
+  const productData = useSelector((state) => state.data.products);
   useEffect(() => {
-    const product = arrayProduct.find((el) => el.id == id);
+    const product = productData.find((el) => el.id == id);
     if (product) {
-      setData(product);
+      setDataProduct(product);
     }
-  }, [id]);
+  }, []);
   return (
     <>
       <Header />
-      <p>{data.description}</p>
       <Facilities />
-      <InfoProduct />
-      <Review />
+      <InfoProduct infoProd={dataProduct} />
+      <Review id={dataProduct.id} />
       <Footer />
     </>
   );

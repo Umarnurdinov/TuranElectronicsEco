@@ -1,6 +1,7 @@
 body {
   background: #e3edf7;
-  margin: 0;
+  margin: 0 0 40px 0;
+  font-family: "Montserrat", sans-serif;
 }
 .container {
   max-width: 1250px;

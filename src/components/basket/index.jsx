@@ -8,26 +8,48 @@ import elcom from "../../assets/elcom.png";
 import optima from "../../assets/optima.png";
 import qrcode from "../../assets/qrcode.png";
 import done from "../../assets/Done.png";
+import product from "../../assets/iphone14.png";
 import { Link } from "react-router-dom";
 import { Button, Checkbox, Dropdown, Input, Space, message } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import OrderCard from "../orderCard";
 import { deleteAllProducts } from "../../store/basket";
+import axios from "axios";
 
 function BasketPage() {
+  const [dataOrder, setDataOrder] = useState({
+    full_name: "",
+    phone_number: "",
+    email: "",
+  });
+
+  const [value, setValue] = useState("");
+  const [valueCity, setValueCity] = useState("");
   const basketData = useSelector((state) => state.basket.products);
   const [btn, setBtn] = useState(false);
   const amount = useSelector((state) => state.basket.amount);
   const dispatch = useDispatch();
-
   const handleMenuClick = (e) => {
-    message.info("Click on menu item.");
-    console.log("click", console.log(e));
+    setValue(items[e.key - 1].label);
+  };
+  const handleMenuClickCity = (e) => {
+    setValueCity(items[e.key - 1].label);
   };
   const oformiteHandler = () => {
     setBtn(true);
   };
+  function sendOrderHandler() {
+    basketData.forEach((el) => {
+      let obj = {
+        ...dataOrder,
+        ordered_product_id: el.id,
+      };
+      axios
+        .post("https://turaneletronic.onrender.com/orders/", obj)
+        .then((res) => console.log(res));
+    });
+  }
   const items = [
     {
       label: "Чуй",
@@ -65,7 +87,7 @@ function BasketPage() {
   };
   const menuProps2 = {
     items,
-    onClick: handleMenuClick,
+    onClick: handleMenuClickCity,
   };
   const deleteAll = () => {
     dispatch(deleteAllProducts());
@@ -80,10 +102,10 @@ function BasketPage() {
               Главная
             </Link>
             <Link to={"/categories"} className="categoriesFrombasket">
-              | Каталог
+              / Каталог
             </Link>
             <Link to={"/basket"} className="basketFromBasket">
-              | Корзинаimport {deleteAllProducts}
+              / Корзина {deleteAllProducts}
             </Link>
           </div>
           <div className="basket__delete">
@@ -98,7 +120,7 @@ function BasketPage() {
                 <OrderCard key={index} order={el} />
               ))}
               <div className="basket__buy">
-                <h1 className="total__amount">Итого:{amount} сом</h1>
+                <h1 className="total__amount">Итого:{amount} $</h1>
                 <button onClick={oformiteHandler} className="buyFromBasket">
                   Оформить заказ
                 </button>
@@ -122,16 +144,49 @@ function BasketPage() {
               </Link>
             </div>
             <div className="basket__inputs">
-              <Input className="nameFromBasket" placeholder="Фамилия и имя *" />
+              <Input
+                value={dataOrder.full_name}
+                onChange={(e) =>
+                  setDataOrder({
+                    ...dataOrder,
+                    full_name: e.target.value,
+                  })
+                }
+                className="nameFromBasket"
+                placeholder="Фамилия и имя *"
+              />
               <div className="basket__phoneAndEmail">
-                <Input className="phoneFromBasket" placeholder="Телефон *" />
-                <Input className="emailFromBasket" placeholder="Email" />
+                <Input
+                  value={dataOrder.phone_number}
+                  onChange={(e) =>
+                    setDataOrder({
+                      ...dataOrder,
+                      phone_number: e.target.value,
+                    })
+                  }
+                  className="phoneFromBasket"
+                  placeholder="Телефон *"
+                />
+                <Input
+                  value={dataOrder.email}
+                  onChange={(e) =>
+                    setDataOrder({
+                      ...dataOrder,
+                      email: e.target.value,
+                    })
+                  }
+                  className="emailFromBasket"
+                  placeholder="Email"
+                />
               </div>
             </div>
             <div className="basket__checkbox">
               <Checkbox className="checkFromBasket">
                 Зарегистрироваться
               </Checkbox>
+              <Button type="primary" onClick={sendOrderHandler}>
+                Отправить
+              </Button>
             </div>
             <div className="delivery">
               <div className="self__call">
@@ -150,7 +205,7 @@ function BasketPage() {
                   <Dropdown className="districtChoose" menu={menuProps}>
                     <Button>
                       <Space className="districtSpace">
-                        Область
+                        {value.length > 1 ? `${value}` : "Область"}
                         <DownOutlined />
                       </Space>
                     </Button>
@@ -158,7 +213,8 @@ function BasketPage() {
                   <Dropdown className="cityChoose" menu={menuProps2}>
                     <Button>
                       <Space className="citySpace">
-                        Город
+                        {valueCity.length > 1 ? `${valueCity}` : "Город"}
+
                         <DownOutlined />
                       </Space>
                     </Button>
@@ -169,11 +225,11 @@ function BasketPage() {
                   <Input className="home" placeholder="Дом/кв" />
                 </div>
                 <div className="delivery__price">
-                  <p className="delivery__price">от 200 сом (1-3 дня)</p>
+                  <p className="delivery__price">от 200 $ (1-3 дня)</p>
                 </div>
               </div>
             </div>
-            <div className="paymentMethod">
+            {/* <div className="paymentMethod">
               <div className="paymentMethod__title">
                 <h1 className="paymentMethod__text">Способ оплаты</h1>
                 <div className="bankCard">
@@ -203,7 +259,7 @@ function BasketPage() {
                   Оформить <br /> рассрочку
                 </p>
               </div>
-            </div>
+            </div> */}
             <div className="qrcode">
               <h1 className="qrcode__text">
                 Отсканируйте QR код с вашего электронного кошелька
@@ -224,7 +280,7 @@ function BasketPage() {
               <div className="details">
                 <p className="details__text">Детали заказа</p>
                 <p className="detail__name">Iphone 14 Pro max 256gb Gold</p>
-                <p className="detail__price">74500 сом</p>
+                <p className="detail__price">74500 $</p>
                 <p className="detail__typeDelivery">Самовывоз</p>
               </div>
             </div>

@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./accessories.scss";
-import arrowalac from "../../assets/arrowRight.png";
-import arrowarac from "../../assets/arrowLeft.png";
+import arrowalac from "../../assets/arrowRight.svg";
+import arrowarac from "../../assets/arrowLeft.svg";
 import adapter from "../../assets/image17.png";
 import { Link } from "react-router-dom";
 import AccessoriesCard from "../accessoriesCard";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const data = [
   {
@@ -63,20 +65,68 @@ export const data = [
     id: 4,
     inStock: false,
   },
+  {
+    img: { adapter },
+    price: 3000,
+    title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
+    description:
+      "iPhone 14 Pro MaxВолшебный новый способ взаимодействия с iPhone. .....",
+    raiting: 2,
+    date: 1706762854 * 1000,
+    colors: ["#604d4d", "#00ffff", "#fff"],
+    id: 4,
+    inStock: false,
+  },
+  {
+    img: { adapter },
+    price: 3000,
+    title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
+    description:
+      "iPhone 14 Pro MaxВолшебный новый способ взаимодействия с iPhone. .....",
+    raiting: 2,
+    date: 1706762854 * 1000,
+    colors: ["#604d4d", "#00ffff", "#fff"],
+    id: 4,
+    inStock: false,
+  },
+  {
+    img: { adapter },
+    price: 3000,
+    title: "  Смартфон Apple iPhone 14 Pro Max 256GB EU",
+    description:
+      "iPhone 14 Pro MaxВолшебный новый способ взаимодействия с iPhone. .....",
+    raiting: 2,
+    date: 1706762854 * 1000,
+    colors: ["#604d4d", "#00ffff", "#fff"],
+    id: 4,
+    inStock: false,
+  },
 ];
-const Accessories = () => {
+function Accessories() {
+  useEffect(() => {
+    AOS.init({
+      duration: 600,
+      easing: "ease-in-out",
+    });
+  }, []);
   return (
     <div className="accessories">
       <div className="container">
         <div className="accessories">
           <div className="accessories__titlemain">
             <div className="accessories__title">
-              <h1 className="accessoriesText">Аксессуары</h1>
+              <h1 data-aos="zoom-in" className="accessoriesText">
+                Аксессуары
+              </h1>
             </div>
             <div className="accessories__btns">
-              <p className="lookAll">Смотреть все</p>
+              <p data-aos="zoom-in-up" className="lookAll">
+                Смотреть все
+              </p>
               <button className="btnLeft">
                 <img
+                  data-aos="zoom-in-left"
+                  data-aos-duration="1500"
                   className="leftArrow"
                   src={arrowarac}
                   alt="Левая-Стрелка-Аксессуары"
@@ -84,6 +134,8 @@ const Accessories = () => {
               </button>
               <button className="btnRight">
                 <img
+                  data-aos="zoom-in-right"
+                  data-aos-duration="1500"
                   className="rightArrow"
                   src={arrowalac}
                   alt="Правая-Стрелка-Аксессуары"
@@ -100,6 +152,6 @@ const Accessories = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Accessories;

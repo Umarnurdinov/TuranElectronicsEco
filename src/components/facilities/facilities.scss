@@ -40,8 +40,19 @@
     border: none;
     margin-top: 30px;
   }
+  .delivery__nav button:active,
+  .service__nav button:active,
+  .guarantee__nav button:active,
+  .credit__nav button:active {
+    border-radius: 20px;
+    width: 295px;
+    height: 61px;
+    box-shadow: inset 7px 7px 7px 0 rgba(18, 61, 101, 0.14),
+      inset -7px -7px 7px 0 #fff;
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+  }
   .delivery__nav span {
-    font-family: var(--font-family);
+    font-family: "Montserrat";
     font-weight: 400;
     font-size: 18px;
     line-height: 333%;
@@ -61,7 +72,7 @@
   }
 
   .service__nav span {
-    font-family: var(--font-family);
+    font-family: "Montserrat";
     font-weight: 400;
     font-size: 18px;
     line-height: 333%;
@@ -81,7 +92,7 @@
   }
 
   .guarantee__nav span {
-    font-family: var(--font-family);
+    font-family: "Montserrat";
     font-weight: 400;
     font-size: 18px;
     line-height: 333%;
@@ -101,7 +112,7 @@
   }
 
   .credit__nav span {
-    font-family: var(--font-family);
+    font-family: "Montserrat";
     font-weight: 400;
     font-size: 18px;
     line-height: 333%;
