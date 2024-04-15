@@ -4,7 +4,6 @@ const DELETEPRODUCT = "DELETEPRODUCT";
 const DELETEPRODUCTALL = "DELETEPRODUCTALL";
 const AMOUNTPLUS = "AMOUNTPLUS";
 const AMOUNTMINUS = "AMOUNTMINUS";
-const CHOOSECOLOR = "CHOOSECOLOR";
 
 export const deleteAllProducts = () => {
   return {
@@ -17,7 +16,6 @@ const initialState = {
   products: [],
   price: 0,
   amount: 0,
-  color: [],
 };
 
 function basketReducer(state = initialState, action) {
@@ -37,8 +35,8 @@ function basketReducer(state = initialState, action) {
     case DELETEPRODUCT:
       return {
         ...state,
-        counter: state.counter - 1,
-        products: state.products.filter((el) => el.id != action.payload),
+        counter: (state.counter -= 1),
+        products: state.products.filter((el) => el.id !== action.payload),
       };
 
     case AMOUNTPLUS:
@@ -58,13 +56,7 @@ function basketReducer(state = initialState, action) {
         products: [],
         price: 0,
         amount: 0,
-        color: [],
       };
-    case CHOOSECOLOR:
-      const newStateColor = { ...state };
-      newStateColor.color.push(action.payload);
-
-      return newStateColor;
 
     default:
       return state;
