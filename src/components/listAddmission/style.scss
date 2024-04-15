@@ -3,44 +3,54 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
   &__title {
-    font-family: var(--font-family);
+    font-family: "Montserrat";
     font-weight: 400;
     font-size: 30px;
     line-height: 80%;
     color: #000;
   }
 }
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.imgArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media screen and (max-width: 1060px) {
-  .list {
+  .cards {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 814px) {
-  .list {
+  .cards {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-
-
 @media screen and (max-width: 480px) {
-    .list__title {
-        font-family: var(--font-family);
-        font-weight: 400;
-        font-size: 15px;
-        line-height: 160%;
-        color: #000;
-    }
-    .list {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-            // justify-content: center;
-    }
-    .card__content__colors .color {
-        width: 20px;
-        height: 20px;
-    }
+  .list__title {
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #000;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // flex-wrap: wrap;
+    // justify-content: center;
+  }
+  .card__content__colors .color {
+    width: 20px;
+    height: 20px;
+  }
 }

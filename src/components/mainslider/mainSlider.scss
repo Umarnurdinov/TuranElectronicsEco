@@ -17,6 +17,7 @@
     object-fit: cover;
     width: 1249px;
     height: 282px;
+    color: rgb(252, 251, 251);
   }
 }
 .slick-next {
@@ -83,6 +84,10 @@
     max-width: 700px !important;
     object-fit: cover !important;
   }
+  .slick-next,
+  .slick-prev {
+    display: none !important;
+  }
 }
 @media screen and (max-width: 600px) {
   .copterMain img,
@@ -99,10 +104,6 @@
     max-width: 500px !important;
     height: 170px !important;
     object-fit: cover !important;
-  }
-  .slick-next,
-  .slick-prev {
-    display: none !important;
   }
   .slick-dots li {
     margin: 0 !important;

@@ -8,7 +8,7 @@
       display: flex;
       flex-direction: column;
       border-radius: 24px;
-      padding: 0px 20px;
+      padding: 10px 20px;
       box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
         inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
       background: linear-gradient(
@@ -20,21 +20,21 @@
         #c6d7eb 100%
       );
       &__name {
-        font-family: var(--font-family);
+        font-family: "Montserrat";
         font-weight: 500;
         font-size: 20px;
         line-height: 300%;
         color: #000;
       }
       &__date {
-        font-family: var(--font-family);
+        font-family: "Montserrat";
         font-weight: 500;
         font-size: 20px;
         line-height: 300%;
         color: #888;
       }
       &__text__title {
-        font-family: var(--font-family);
+        font-family: "Montserrat";
         font-weight: 500;
         font-size: 20px;
         line-height: 165%;
@@ -59,7 +59,7 @@
     box-shadow: 16px 16px 64px 0 rgba(18, 61, 101, 0.48),
       -16px -16px 40px 0 rgba(255, 255, 255, 0.8);
     background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
-    font-family: var(--font-family);
+    font-family: "Montserrat";
     font-weight: 400;
     font-size: 18px;
     line-height: 333%;
@@ -69,6 +69,15 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+  }
+  .reviewAddBtn:active {
+    border: 1px solid #fff;
+    border-radius: 16px;
+    width: 240px;
+    height: 61px;
+    box-shadow: inset 7px 7px 6px 0 rgba(136, 165, 191, 0.48),
+      inset -4px -4px 6px 0 #fff;
+    background: #e3edf7;
   }
   .textArea {
     border: 1px solid #d4d4d4;
@@ -92,13 +101,20 @@
     height: 40px;
     box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48), -4px -2px 16px 0 #fff;
     background: #e3edf7;
-    font-family: var(--font-family);
+    font-family: "Montserrat";
     font-weight: 500;
     font-size: 18px;
     line-height: 133%;
     text-align: center;
     color: #000;
   }
+}
+.starRaiting {
+  width: 50px;
+}
+.box__stars {
+  display: flex;
+  justify-content: center;
 }
 @media screen and (max-width: 360px) {
   .review__content__title__name,

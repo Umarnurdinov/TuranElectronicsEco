@@ -42,6 +42,22 @@
   display: flex;
   justify-content: space-around;
 }
+.price__tovar__block {
+  margin: 0 0 2px 0;
+}
 .accessories__block__basket {
   cursor: pointer;
+}
+@media screen and (max-width: 2000px) {
+  .price__tovar__blockAdaptive {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .fast__delivery {
+    display: none;
+  }
+  .price__tovar__blockAdaptive {
+    display: block;
+  }
 }

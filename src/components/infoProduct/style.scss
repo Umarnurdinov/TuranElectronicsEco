@@ -6,7 +6,7 @@
     gap: 7px;
   }
   .toHome {
-    font-family: var(--font-family);
+    font-family: "Montserrat";
     font-weight: 700;
     font-size: 20px;
     line-height: 300%;
@@ -14,7 +14,7 @@
     text-decoration: none;
   }
   .toCatalog {
-    font-family: var(--font-family);
+    font-family: "Montserrat";
     font-weight: 700;
     font-size: 20px;
     line-height: 300%;
@@ -22,7 +22,7 @@
     text-decoration: none;
   }
   .toIphonePage {
-    font-family: var(--font-family);
+    font-family: "Montserrat";
     font-weight: 700;
     font-size: 20px;
     line-height: 300%;
@@ -30,7 +30,7 @@
     text-decoration: none;
   }
   .toIphone14Page {
-    font-family: var(--font-family);
+    font-family: "Montserrat";
     font-weight: 700;
     font-size: 20px;
     line-height: 300%;
@@ -65,7 +65,7 @@
         justify-content: start;
         gap: 17px;
         &__text {
-          font-family: var(--font-family);
+          font-family: "Montserrat";
           font-weight: 700;
           font-size: 20px;
           line-height: 80%;
@@ -112,15 +112,14 @@
           #c6d7eb 100%
         );
         &__logo {
-          font-family: var(--font-family);
+          font-family: "Montserrat";
           font-weight: 700;
           font-size: 24px;
           line-height: 150%;
           color: #000;
         }
         &__texts {
-          font-family: var(--font-family);
-          font-weight: 700;
+          font-family: "Montserrat";
           font-size: 24px;
           line-height: 150%;
           color: #000;
@@ -145,7 +144,7 @@
         #c6d7eb 100%
       );
       &__nameProduct {
-        font-family: var(--font-family);
+        font-family: "Montserrat";
         font-weight: 700;
         font-size: 32px;
         line-height: 125%;
@@ -156,19 +155,46 @@
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 30px;
+        gap: 10px;
         &__text {
-          font-family: var(--font-family);
+          font-family: "Montserrat";
           font-weight: 700;
           font-size: 20px;
           line-height: 200%;
           color: #888;
         }
-        &__mini {
+        &__content {
           display: flex;
           align-items: center;
           justify-content: center;
-          font-family: var(--third-family);
+          border: 1px solid #fff;
+          border-radius: 16px;
+          width: 100px;
+          height: 40px;
+          background: #e3edf7;
+          box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48),
+            -4px -2px 16px 0 #fff;
+          font-family: "Montserrat";
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 89%;
+          text-align: center;
+          color: #000;
+        }
+        .info__content__pretitle__memory__content.active {
+          border: 1px solid #fff;
+          border-radius: 16px;
+          width: 100px;
+          height: 40px;
+          box-shadow: inset 7px 7px 7px 0 rgba(18, 61, 101, 0.14),
+            inset -7px -7px 7px 0 #fff;
+          background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+        }
+        &__contentActive {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: "Montserrat";
           font-weight: 700;
           font-size: 18px;
           line-height: 89%;
@@ -182,45 +208,9 @@
             inset -7px -7px 7px 0 #fff;
           background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
         }
-        &__middle {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border: 1px solid #fff;
-          border-radius: 16px;
-          width: 100px;
-          height: 40px;
-          background: #e3edf7;
-          box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48),
-            -4px -2px 16px 0 #fff;
-          font-family: var(--third-family);
-          font-weight: 700;
-          font-size: 18px;
-          line-height: 89%;
-          text-align: center;
-          color: #000;
-        }
-        &__big {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          border: 1px solid #fff;
-          border-radius: 16px;
-          width: 100px;
-          height: 40px;
-          background: #e3edf7;
-          box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48),
-            -4px -2px 16px 0 #fff;
-          font-family: var(--third-family);
-          font-weight: 700;
-          font-size: 18px;
-          line-height: 89%;
-          text-align: center;
-          color: #000;
-        }
       }
       &__price {
-        font-family: var(--font-family);
+        font-family: "Montserrat";
         font-weight: 700;
         font-size: 32px;
         line-height: 125%;
@@ -241,7 +231,7 @@
         box-shadow: 16px 16px 64px 0 rgba(18, 61, 101, 0.48),
           -16px -16px 40px 0 rgba(255, 255, 255, 0.8);
         background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
-        font-family: var(--font-family);
+        font-family: "Montserrat";
         font-weight: 700;
         font-size: 24px;
         line-height: 250%;
@@ -254,14 +244,14 @@
         justify-content: center;
         flex-direction: column;
         &__text {
-          font-family: var(--font-family);
+          font-family: "Montserrat";
           font-weight: 700;
           font-size: 24px;
           line-height: 67%;
           color: #888;
         }
         &__varanty {
-          font-family: var(--font-family);
+          font-family: "Montserrat";
           font-weight: 700;
           font-size: 20px;
           line-height: 240%;
@@ -269,7 +259,7 @@
           margin: 0;
         }
         &__display {
-          font-family: var(--font-family);
+          font-family: "Montserrat";
           font-weight: 700;
           font-size: 20px;
           line-height: 240%;
@@ -277,7 +267,7 @@
           margin: 0;
         }
         &__settingsDisplay {
-          font-family: var(--font-family);
+          font-family: "Montserrat";
           font-weight: 700;
           font-size: 20px;
           line-height: 240%;
@@ -285,7 +275,7 @@
           margin: 0;
         }
         &__processor {
-          font-family: var(--font-family);
+          font-family: "Montserrat";
           font-weight: 700;
           font-size: 20px;
           line-height: 240%;
@@ -293,7 +283,7 @@
           margin: 0;
         }
         &__memory {
-          font-family: var(--font-family);
+          font-family: "Montserrat";
           font-weight: 700;
           font-size: 20px;
           line-height: 240%;
@@ -301,7 +291,7 @@
           margin: 0;
         }
         &__mainCamera {
-          font-family: var(--font-family);
+          font-family: "Montserrat";
           font-weight: 700;
           font-size: 20px;
           line-height: 240%;
@@ -309,7 +299,7 @@
           margin: 0;
         }
         &__cores {
-          font-family: var(--font-family);
+          font-family: "Montserrat";
           font-weight: 700;
           font-size: 20px;
           line-height: 240%;
@@ -317,7 +307,7 @@
           margin: 0;
         }
         &__resolution {
-          font-family: var(--font-family);
+          font-family: "Montserrat";
           font-weight: 700;
           font-size: 20px;
           line-height: 240%;

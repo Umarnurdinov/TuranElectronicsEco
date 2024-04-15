@@ -1,0 +1,393 @@
+.filter__content {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-between;
+  box-shadow: 10px 10px 64px 0 rgba(18, 61, 101, 0.3),
+    -16px -16px 40px 0 rgba(255, 255, 255, 0.8);
+  background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+  border-radius: 20px;
+  margin-bottom: 10pc;
+  padding-right: 10px;
+}
+.filter__content__logo {
+  display: flex;
+}
+.color__text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.price__text {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.inputs__text {
+  display: flex;
+  gap: 10px;
+}
+.filter__content__model,
+.filter__content__memory {
+  margin: 15px 0;
+}
+.filter__content__models,
+.filter__content__memorys {
+  margin: 0;
+}
+.filter__content__color {
+  display: flex;
+  flex-direction: column;
+}
+.filterAll__content__color {
+  display: flex;
+  flex-direction: column;
+}
+.inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.inputsAll {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.filterAll__content__logo {
+  display: flex;
+}
+.filterAll__title__text {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 250%;
+  color: #000;
+  margin: 0;
+}
+.filterAll__title {
+  display: flex;
+  justify-content: space-between;
+}
+.close {
+  position: revert;
+  right: 2%;
+  top: 3%;
+}
+.price__inputs {
+  border-radius: 0 0 20px 20px;
+  width: 288px;
+  height: 90px;
+  box-shadow: 16px 16px 64px 0 rgba(18, 61, 101, 0.48),
+    -8px -8px 40px 0 rgba(255, 255, 255, 0.8);
+  background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  top: 100%;
+  padding: 0 10px;
+}
+.price__inputsAll {
+  border-radius: 0 0 20px 20px;
+  width: 288px;
+  height: 90px;
+  box-shadow: 16px 16px 64px 0 rgba(18, 61, 101, 0.48),
+    -8px -8px 40px 0 rgba(255, 255, 255, 0.8);
+  background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  top: 100%;
+  padding: 0 10px;
+}
+.minPrice {
+  border: 1px solid #fff;
+  border-radius: 16px;
+  width: 120px;
+  height: 40px;
+  box-shadow: inset 3px 3px 7px 0 rgba(136, 165, 191, 0.48),
+    inset -3px -3px 7px 0 #fff;
+  background: #e3edf7;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 333%;
+  color: #000;
+}
+.maxPrice {
+  border: 1px solid #fff;
+  border-radius: 16px;
+  width: 120px;
+  height: 40px;
+  box-shadow: inset 3px 3px 7px 0 rgba(136, 165, 191, 0.48),
+    inset -3px -3px 7px 0 #fff;
+  background: #e3edf7;
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 333%;
+  color: #000;
+}
+.colors {
+  position: absolute;
+  top: 100%;
+  right: 14%;
+  border-radius: 0 0 20px 20px;
+  width: 232px;
+  height: 150px;
+  box-shadow: 16px 16px 64px 0 rgba(18, 61, 101, 0.48),
+    -8px -8px 40px 0 rgba(255, 255, 255, 0.8);
+  background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+  padding-left: 10px;
+}
+.colorsAll {
+  padding-bottom: 20px;
+  border-radius: 0 0 20px 20px;
+  width: 300px;
+  height: auto;
+  box-shadow: 16px 16px 64px 0 rgba(18, 61, 101, 0.48),
+    -8px -8px 40px 0 rgba(255, 255, 255, 0.8);
+  background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+  padding-left: 10px;
+}
+.brown {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.35),
+    -1px -1px 2px 0 rgba(255, 255, 255, 0.25);
+  background: brown;
+  margin: 0;
+}
+.red {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.35),
+    -1px -1px 2px 0 rgba(255, 255, 255, 0.25);
+  background: red;
+  margin: 0;
+}
+.pink {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.35),
+    -1px -1px 2px 0 rgba(255, 255, 255, 0.25);
+  background: pink;
+  margin: 0;
+}
+.white {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.35),
+    -1px -1px 2px 0 rgba(255, 255, 255, 0.25);
+  background: white;
+  margin: 0;
+}
+.green {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.35),
+    -1px -1px 2px 0 rgba(255, 255, 255, 0.25);
+  background: green;
+  margin: 0;
+}
+.gold {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.35),
+    -1px -1px 2px 0 rgba(255, 255, 255, 0.25);
+  background: gold;
+  margin: 0;
+}
+.yellow {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.35),
+    -1px -1px 2px 0 rgba(255, 255, 255, 0.25);
+  background: yellow;
+  margin: 0;
+}
+.grey {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, 0.35),
+    -1px -1px 2px 0 rgba(255, 255, 255, 0.25);
+  background: grey;
+  margin: 0;
+}
+.color__text {
+  margin-right: 20px;
+}
+.colorsFilter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.acceptBtn {
+  border: 1px solid #fff;
+  border-radius: 16px;
+  width: 150px;
+  height: 40px;
+  box-shadow: 4px 2px 16px 0 rgba(136, 165, 191, 0.48), -4px -2px 16px 0 #fff;
+  background: #e3edf7;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+  text-align: center;
+  color: #000;
+}
+.acceptBtn:active {
+  border: 1px solid #fff;
+  border-radius: 16px;
+  width: 150px;
+  height: 40px;
+  box-shadow: inset 7px 7px 6px 0 rgba(136, 165, 191, 0.48),
+    inset -4px -4px 6px 0 #fff;
+  background: #e3edf7;
+}
+.filterAll__text {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.filterAll__window {
+  overflow-y: scroll;
+  padding: 10px 10px 10px 20px;
+  display: flex;
+  align-items: self-start;
+  flex-direction: column;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 4;
+  border-radius: 0 0 20px 20px;
+  width: 310px;
+  height: 783px;
+  box-shadow: 16px 16px 64px 0 rgba(18, 61, 101, 0.48),
+    -8px -8px 40px 0 rgba(255, 255, 255, 0.8);
+  background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+}
+.dropdownBrand {
+  display: flex;
+  gap: 5px;
+}
+.imgBrand {
+  width: 20px;
+}
+.brandFilter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.modelFilter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.memoryFilter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.modelScroll {
+  height: 300px;
+  overflow-y: scroll;
+}
+.memoryScroll {
+  height: 300px;
+  overflow-y: scroll;
+}
+@media screen and (max-width: 2000px) {
+  .filterForAdaptive {
+    display: none;
+  }
+}
+@media screen and (max-width: 930px) {
+  .colors {
+    top: 82.2%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .colors {
+    top: 64%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .colors {
+    top: 97.6%;
+    right: 5%;
+  }
+}
+@media screen and (max-width: 615px) {
+  .colors {
+    top: 34%;
+    right: 5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .filter {
+    display: none;
+  }
+  .filterForAdaptive {
+    display: block;
+  }
+  .filter__content__logo {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    max-width: 500px;
+    height: 41px;
+    padding: 0 10px;
+    box-shadow: 16px 4px 64px 0 rgba(18, 61, 101, 0.2),
+      inset -8px -6px 80px 0 rgba(255, 255, 255, 0.18);
+    background: linear-gradient(199deg, #ebf2f9 33.53%, #c6d7eb 100%);
+  }
+  .filter__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 0 0 20px 20px;
+    padding: 20px;
+    margin-bottom: 7pc;
+  }
+  .price__text {
+    margin: 0;
+  }
+  .color__text {
+    margin: 0;
+  }
+  .inputs {
+    gap: 20px;
+  }
+  .price__inputs {
+    position: relative;
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+  .colors {
+    position: relative;
+  }
+  .color__text {
+    text-align: center;
+  }
+}
