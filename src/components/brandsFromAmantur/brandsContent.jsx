@@ -42,7 +42,6 @@ function BrandsContent() {
   //     dispatch({ type: "BrandsInfo", payload: res.data });
   //   });
   // }, []);
-  // console.log(brandsSelec);
 
   return (
     <>
@@ -148,12 +147,7 @@ function BrandsContent() {
         </div>
       </div>
       <div className="brandsForAdaptive__content">
-        <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
-          onSlideChange={() => console.log("slide change")}
-          onSwiper={(swiper) => console.log(swiper)}
-        >
+        <Swiper spaceBetween={50} slidesPerView={3}>
           <SwiperSlide>
             <Link to={"/applePage"}>
               <div data-aos="flip-left" className="appleForAdaptive">

@@ -55,7 +55,7 @@
   border: 2px solid orange;
 }
 .newPrice {
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 18px;
   line-height: 133%;
@@ -63,7 +63,7 @@
   margin: 0;
 }
 .oldPrice {
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 13px;
   line-height: 185%;
@@ -77,7 +77,7 @@
   gap: 30px;
 }
 .purcent {
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 13px;
   line-height: 185%;
@@ -90,7 +90,7 @@
   text-align: center;
 }
 .econom {
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 500;
   font-size: 11px;
   line-height: 218%;
@@ -106,7 +106,7 @@
   flex-direction: column;
 }
 .nameProduct {
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 16px;
   line-height: 114%;
@@ -116,7 +116,7 @@
   display: flex;
 }
 .lookAll__text {
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 25px;
   line-height: 96%;
@@ -124,7 +124,7 @@
   color: #000;
 }
 .character {
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 400;
   font-size: 14px;
   line-height: 114%;
@@ -195,7 +195,7 @@
   background: #e3edf7;
 }
 .card__footer__text {
-  font-family: var(--font-family);
+  font-family: "Montserrat";
   font-weight: 600;
   font-size: 15px;
   line-height: 160%;
@@ -248,7 +248,20 @@
 }
 @media screen and (max-width: 480px) {
   .card {
+    width: 170px;
+    height: auto;
     padding: 10px;
     height: auto;
+  }
+  .heartImgForAdaptive {
+    display: none;
+  }
+  .watchImg {
+    width: 157px;
+    height: 146px;
+  }
+  .productAndLike {
+    display: flex;
+    align-items: center;
   }
 }

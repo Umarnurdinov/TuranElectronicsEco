@@ -55,20 +55,14 @@ function Filter({
     setCategory(currentCategory.id);
   }
   function categoriesChangeAll(e) {
-    console.log(e.target);
     if (
       e.target.innerHTML ==
       `<p><img src="/src/assets/checkFilterFull.svg" alt="">${e.target.innerText}</p>`
     ) {
       e.target.innerHTML = `<p><img src="/src/assets/checkFilter.svg" alt="">${e.target.innerText}</p>`;
     } else {
-      // console.log(false);
       e.target.innerHTML = `<p><img src="/src/assets/checkFilterFull.svg" alt=""/>${e.target.innerText}</p>`;
     }
-    console.log(
-      `<img src="/src/assets/checkFilterFull.svg" alt="">${e.target.innerText}`
-    );
-    console.log(e.target.innerHTML);
     setCheckBrand(!checkBrand);
     let currentCategory = categoriesArray.find(
       (el) => el.name == e.target.innerText
@@ -76,20 +70,14 @@ function Filter({
     setCategory(currentCategory.id);
   }
   function modelsChangeAll(e) {
-    console.log(e.target);
     if (
       e.target.innerHTML ==
       `<p><img src="/src/assets/checkFilterFull.svg" alt="">${e.target.innerText}</p>`
     ) {
       e.target.innerHTML = `<p><img src="/src/assets/checkFilter.svg" alt="">${e.target.innerText}</p>`;
     } else {
-      // console.log(false);
       e.target.innerHTML = `<p><img src="/src/assets/checkFilterFull.svg" alt=""/>${e.target.innerText}</p>`;
     }
-    console.log(
-      `<img src="/src/assets/checkFilterFull.svg" alt="">${e.target.innerText}`
-    );
-    console.log(e.target.innerHTML);
     setCheckModel(!checkModel);
     let currentCategory = setProducts.find(
       (el) => el.name == e.target.innerText
@@ -103,19 +91,14 @@ function Filter({
         easing: "ease-in-out",
       });
     }, []);
-    console.log(e.target);
     if (
       e.target.innerHTML ==
       `<p><img src="/src/assets/checkFilterFull.svg" alt="">${e.target.innerText}</p>`
     ) {
       e.target.innerHTML = `<p><img src="/src/assets/checkFilter.svg" alt="">${e.target.innerText}</p>`;
     } else {
-      // console.log(false);
       e.target.innerHTML = `<p><img src="/src/assets/checkFilterFull.svg" alt=""/>${e.target.innerText}</p>`;
     }
-    console.log(
-      `<img src="/src/assets/checkFilterFull.svg" alt="">${e.target.innerText}`
-    );
   }
 
   function chooseColor(adelina) {
@@ -145,7 +128,6 @@ function Filter({
     setDropdown3(!dropdown3);
   }
   function checkFunc(e) {
-    console.log(e);
     // if (
     //   e &&
     //   e.target.src == `http://localhost:5174/src/assets/checkFilterFull.svg`
@@ -170,7 +152,6 @@ function Filter({
     key: el.id,
     label: el.model,
   }));
-  console.log(categories);
   memory = [...new Set(setProducts.flatMap((el) => el.memories))].map(
     (mem, idx) => ({ name: "Память", key: idx.toString(), label: mem })
   );

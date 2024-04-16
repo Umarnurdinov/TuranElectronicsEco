@@ -57,7 +57,6 @@ function ApplePage() {
       setCategories(res.data);
     });
   }, []);
-  console.log(products);
   return (
     <>
       <Header />

@@ -41,7 +41,6 @@ function Recomends({ Newdata }) {
     if (email) {
       const products = arrayData.map((el) => el.id);
       products.push(data.id);
-      console.log(products);
 
       const basketOrderSend = {
         email: email,
@@ -52,7 +51,6 @@ function Recomends({ Newdata }) {
         "https://turaneletronic.onrender.com/basket/",
         basketOrderSend
       ).then((res) => {
-        console.log(res);
         setCounter(counter + 1);
         dispatch({ type: "ADDPRODUCT", payload: data });
         dispatch({ type: "AMOUNTPLUS", payload: data.price });
