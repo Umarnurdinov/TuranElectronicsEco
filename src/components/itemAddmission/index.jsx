@@ -15,7 +15,6 @@ import Skeleton, { SkeletonTheme } from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 
 function ItemAddmission({ Newdata }) {
-  console.log(Newdata);
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -81,18 +80,15 @@ function ItemAddmission({ Newdata }) {
     if (email) {
       const products = arrayProduct.map((el) => el.id);
       products.push(Newdata.id);
-      console.log(products);
 
       const basketOrderSend = {
         email: email,
         products: products,
       };
 
-      console.log(basketOrderSend);
       axios
         .post("https://turaneletronic.onrender.com/basket/", basketOrderSend)
         .then((res) => {
-          console.log(res);
           setCounter(counter + 1);
           dispatch({ type: "ADDPRODUCT", payload: Newdata });
           dispatch({ type: "AMOUNTPLUS", payload: Newdata.price });
