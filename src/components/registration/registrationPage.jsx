@@ -27,7 +27,6 @@
 //       axios
 //         .post("https://turaneletronic.onrender.com/signup/", data)
 //         .then((res) => {
-//           console.log(res);
 //           dispatch({ type: "EmailData", payload: res.data.email });
 //         });
 //     }
@@ -170,11 +169,9 @@ function Registr() {
   };
   const registerHandler = () => {
     if (acceptRule) {
-      console.log(data);
       axios
         .post("https://turaneletronic.onrender.com/signup/", data)
         .then((res) => {
-          console.log(res);
           dispatch({ type: "EmailData", payload: res.data.email });
           nav("/");
         });

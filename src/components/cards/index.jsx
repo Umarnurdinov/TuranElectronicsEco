@@ -22,9 +22,6 @@ function Cards({ products }) {
   const [slicedProducts3, setSlicedProducts3] = useState([]);
   const [filterProducts, setFilterProducts] = useState(slicedProducts);
   const newProduct = [...products];
-  console.log(newProduct);
-  console.log(filterProducts);
-  console.log(slicedProducts);
   useEffect(() => {
     if (products.length > 4) {
       setSlicedProducts(newProduct.slice(0, 4));
@@ -78,7 +75,7 @@ function Cards({ products }) {
             Рекомендуемые
           </h1>
           <div className="recomended__lookAll">
-            <a data-aos="zoom-in" className="lookAll__text">
+            <a onClick={lookAll} data-aos="zoom-in" className="lookAll__text">
               {viewAll ? "Скрыть" : "Смотреть все"}
             </a>
             <a className="lookAll__btn">

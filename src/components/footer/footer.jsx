@@ -180,17 +180,17 @@ function Footer() {
         </div>
       </div>
       <div className="footer__adaptive">
-        <Link data-aos="zoom-out" to={"/"}>
+        <Link to={"/"}>
           <img src={home} alt="#" />
         </Link>
-        <Link data-aos="zoom-out" to={"/categories"}>
+        <Link to={"/categoryPage"}>
           <img src={settings} alt="#" />
         </Link>
-        <Link data-aos="zoom-out" to={"/favorite"}>
+        <Link to={"/favorite"}>
           <img src={health} alt="#" />
           <span className="basket__counter">{likeCounter}</span>
         </Link>
-        <Link data-aos="zoom-out" to={"/registration"}>
+        <Link to={"/registration"}>
           <img src={profile} alt="#" />
         </Link>
       </div>

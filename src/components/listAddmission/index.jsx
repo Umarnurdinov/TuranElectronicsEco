@@ -7,8 +7,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 function List({ products }) {
-  console.log(products);
-
   useEffect(() => {
     AOS.init({
       duration: 600,
@@ -43,7 +41,7 @@ function List({ products }) {
           Новое поступление
         </h1>
         <div className="recomended__lookAll">
-          <a data-aos="zoom-in" className="lookAll__text">
+          <a onClick={lookAll} data-aos="zoom-in" className="lookAll__text">
             {viewAll ? "Скрыть" : "Смотреть все"}
           </a>
           <a className="lookAll__btn">

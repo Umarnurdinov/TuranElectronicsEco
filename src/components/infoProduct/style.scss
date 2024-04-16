@@ -426,14 +426,14 @@
   .info__content__pretitle__memory__text {
     display: none;
   }
+  .info__pages {
+    display: none;
+  }
 }
 @media screen and (max-width: 470px) {
   .info__content__pretitle__nameProduct,
   .info__content__pretitle__price {
     font-size: 15px;
-  }
-  .info__pages {
-    display: none;
   }
   .info__content__pretitle__memory__mini,
   .info__content__pretitle__memory__middle,

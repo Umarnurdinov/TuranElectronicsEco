@@ -42,7 +42,6 @@ function InfoProduct({ infoProd }) {
   function memorySelect(e) {
     setMemorySelected(e.target.innerText);
     e.stopPropagation();
-    console.log(e.target.innerText);
   }
   function likeHandler(e) {
     e.stopPropagation();
