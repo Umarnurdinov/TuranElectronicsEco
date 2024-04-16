@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import React, { useEffect, useState } from "react";
 import "./style.scss";
 import visa from "../../assets/visa.png";
 import mastercard from "../../assets/mastercard.png";
@@ -9,7 +8,7 @@ import elcom from "../../assets/elcom.png";
 import optima from "../../assets/optima.png";
 import qrcode from "../../assets/qrcode.png";
 import done from "../../assets/Done.png";
-import product from "../../assets/iphone14.png";
+// import product from "../../assets/iphone14.png";
 import { Link } from "react-router-dom";
 import { Button, Checkbox, Dropdown, Input, Space, message } from "antd";
 import { DownOutlined } from "@ant-design/icons";
@@ -230,7 +229,7 @@ function BasketPage() {
                 </div>
               </div>
             </div>
-            {/* <div className="paymentMethod">
+            <div className="paymentMethod">
               <div className="paymentMethod__title">
                 <h1 className="paymentMethod__text">Способ оплаты</h1>
                 <div className="bankCard">
@@ -260,7 +259,7 @@ function BasketPage() {
                   Оформить <br /> рассрочку
                 </p>
               </div>
-            </div> */}
+            </div>
             <div className="qrcode">
               <h1 className="qrcode__text">
                 Отсканируйте QR код с вашего электронного кошелька

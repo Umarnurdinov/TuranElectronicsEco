@@ -5,7 +5,6 @@ import Facilities from "../components/facilities/facilities";
 import InfoProduct from "../components/infoProduct";
 import Review from "../components/review";
 import { useParams } from "react-router-dom";
-import { data } from "../components/listAddmission/index2";
 import { useSelector } from "react-redux";
 
 function Product() {
